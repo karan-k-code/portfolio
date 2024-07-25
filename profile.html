@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="profile.css">
+    <link rel="stylesheet" href="dark.css">
+</head>
+<body class="light">
+    <div class="h_container">
+        <li class="option_b">
+          <div class="dark-mode-toggle">
+            <input type="checkbox" id="dark-mode-toggle-checkbox" />
+            <label for="dark-mode-toggle-checkbox"></label>
+          </div>
+          <div class="mode_line">dark mode</div>
+        </li>
+        <div class="help"><a href="help.html">help</a></div>
+      </div>
+        <div class="profile-card box_shadow box_no_dark_shadow light no_dark">
+            <img src="owner_image-removebg.png" alt="Profile Picture" class="profile-img">
+            <h1 class="name">karan kumar</h1>
+            <p class="bio">Web Developer from india. Passionate about coding and coffee.</p>
+            <button onclick="showMore()">Show More</button>
+            <div id="more-info" style="display: none;">
+                <p>Additional information about karan...</p>
+            </div>
+        </div>
+</body>
+<script src="profile.js"></script>
+<script src="dark.js"></script>
+</html>

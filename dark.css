@@ -1,0 +1,45 @@
+.dark-mode-toggle {
+  position: flex;
+}
+.dark-mode-toggle input {
+  display: none;
+}
+.dark-mode-toggle label {
+  display: block;
+  width: 30px;
+  height: 15px;
+  background-color: #ccc;
+  border-radius: 15px;
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.dark-mode-toggle label:after {
+  content: "";
+  position: absolute;
+  top: 2.5px;
+  left: 2.5px;
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.dark-mode-toggle input:checked + label {
+  background-color: #4caf50;
+}
+
+.dark-mode-toggle input:checked + label:after {
+  transform: translateX(15px);
+}
+
+/* ! dark mode color */
+.dark-mode {
+  background-color: black;
+  color: #fff;
+}
+
+.nav_dark {
+  background-color: #315353;
+}

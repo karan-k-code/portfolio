@@ -1,0 +1,90 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    /* justify-content: space-evenly; */
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+    flex-direction: column;
+}
+
+/* !dark mode and help button */
+.h_container {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 10px 0 10px;
+    top: 0px;
+    width: 90%;
+    margin-bottom: 10px;
+  }
+  .option_b {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+  .option_b::marker {
+    content: "";
+  }
+  .help {
+    cursor: pointer;
+  }
+  a {
+    color: inherit; /* Isse anchor tag apne parent element `ka color inherit karega */
+    text-decoration: none;
+  }
+  
+.profile-card {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    width: 300px;
+}
+
+.profile-img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+
+}
+
+.name {
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+.bio {
+    font-size: 16px;
+    color: #666;
+}
+
+button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* box shadow dark mode and no dark mode */
+.box_no_dark_shadow {
+    /* box-shadow: 4px 5px 6px rgb(0, 0, 0); */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  .box_dark_shadow {
+    box-shadow: 0 0px 8px rgba(255, 255, 255, 0.1);
+  }
+
+  .box_no_dark_shadow .profile-img{
+    filter: drop-shadow(0px -2px 8px rgba(0, 0, 0, 0.147));
+  }
+
+  .box_dark_shadow .profile-img{
+    filter: drop-shadow(0px -2px 8px rgba(255, 255, 255, 0.145));
+  }

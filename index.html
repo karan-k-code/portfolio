@@ -4,6 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile</title>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+  />
     <link rel="stylesheet" href="profile.css">
     <link rel="stylesheet" href="dark.css">
 </head>
@@ -16,16 +24,49 @@
           </div>
           <div class="mode_line">dark mode</div>
         </li>
-        <div class="help"><a href="help.html">help</a></div>
+        <div class="help"><a href="help.html">
+          <button>Help</button></a></div>
       </div>
         <div class="profile-card box_shadow box_no_dark_shadow light no_dark">
             <img src="owner_image-removebg.png" alt="Profile Picture" class="profile-img">
             <h1 class="name">karan kumar</h1>
             <p class="bio">Web Developer from india. Passionate about coding and coffee.</p>
             <button onclick="showMore()">Show More</button>
-            <div id="more-info" style="display: none;">
+            <div id="more-info" class="more-info">
                 <p>Additional information about karan...</p>
             </div>
+        </div>
+        <div class="socal_media">
+              <a
+                href="https://www.facebook.com/share/g6CULxzUt6DLVopG/?mibextid=qi2Omg"
+              >
+                <i class="fa-brands fa-facebook"></i>
+              </a>
+
+            <!-- ! Instagram M -->
+
+              <a href="https://www.instagram.com/karan_kgr/">
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+
+            <!-- ! Lindedin M -->
+
+              <a href="https://www.linkedin.com/in/karan-kumar-306a27273">
+                <i class="fa-brands fa-linkedin"></i>
+              </a>
+
+            <!-- ! twitter M-->
+
+              <a href="https://x.com/Karan7352590?t=hPMORdpRBrhYPjMc0Y1Mkw&s=09">
+                <i class="fa-brands fa-twitter"></i>
+              </a>
+
+            <!-- ! Github M-->
+
+              <a href="https://github.com/india-software-karan">
+                <i class="fa-brands fa-github"></i>
+              </a>
+  
         </div>
 </body>
 <script src="profile.js"></script>

@@ -26,19 +26,6 @@ body {
 .option_b::marker {
   content: "";
 }
-.help {
-  cursor: pointer;
-}
-
-.help button{
-  border: none;
-  padding: 2px;
-  cursor: pointer;
-  font-weight: bold;
-  &:hover{
-    color: rgb(17, 17, 173);
-  }
-}
 
 a {
   color: inherit; /* Isse anchor tag apne parent element `ka color inherit karega */
@@ -46,6 +33,7 @@ a {
 }
 
 .profile-card {
+  margin-top: 50px;
   background-color: #fff;
   border-radius: 10px;
   padding: 20px;
@@ -55,6 +43,7 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
+  box-shadow: 0 0 7px rgba(122, 114, 114, 0.7);
 }
 
 .image{
@@ -100,10 +89,10 @@ a {
 /* box shadow dark mode and no dark mode */
 .box_no_dark_shadow {
   /* box-shadow: 4px 5px 6px rgb(0, 0, 0); */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(56, 54, 54, 0.1);
 }
 .box_dark_shadow {
-  box-shadow: 0 0px 8px rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0px 8px rgba(108, 108, 108, 0.1);
 }
 .box_no_dark_shadow .profile-img{
   filter: drop-shadow(0px -2px 8px rgba(0, 0, 0, 0.147));
@@ -127,9 +116,6 @@ a {
   
 }
 
-.hello{
-  
-}
 
 .more-info p{
   transition: 0.5s;

@@ -39,7 +39,6 @@ a {
   padding: 20px;
   text-align: center;
   width: 300px;
-  animation: 1s ease-in-out;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -59,8 +58,6 @@ a {
 .profile-img  {
   margin-top: 10px;
   width: 100%;
-
-  
 }
 
 .name {
@@ -111,15 +108,26 @@ a {
 }
 
 .more-info{
-  display: none;
-  transition: all 2s ease-in-out;
+  overflow: hidden;
+  height: 0px;
+  transition: all 0.5s ease;
   
 }
 
 
 .more-info p{
-  transition: 0.5s;
 }
+
+
+.tran p{
+
+}
+
+.tran{
+  height: 10vh;
+}
+
+
 
 
 .socal_media{

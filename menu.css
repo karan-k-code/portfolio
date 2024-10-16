@@ -47,6 +47,8 @@
     padding: 0;
     position: fixed;
     border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    box-shadow: 0 0 7px rgba(122, 114, 114, 0.7);
 
   }
   /* box shadow dark mode and no dark mode */
@@ -70,7 +72,7 @@
   }
 
   .option_b:hover {
-    box-shadow: 0 0 4px rgb(0, 0, 0);
+    box-shadow: 0 0 7px rgba(122, 114, 114, 0.7);
   }
   .dark_option {
     border: 2px solid transparent;
@@ -89,7 +91,14 @@
     background-color: white;
   }
 
+.bi{
+    margin-left: 5px;
+}
 
+.option_b a{
+    display: flex;
+    gap: 10px;
+}
 
 .option{
     display: flex;

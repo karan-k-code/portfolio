@@ -1,160 +1,460 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KARAN</title>
+    <!-- k icon -->
+    <link rel="icon" href="../k.png" type="image/x-icon" />
     <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-  />
-  <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
-  />
-    <link rel="stylesheet" href="profile.css">
-    <link rel="stylesheet" href="dark.css">
-    <link rel="stylesheet" href="menu.css">
-</head>
-<body class="light">
-      <div class="menu_box" style="left: -200px;">
-        <div class="nav-option" id="menu-button">
-          <div class="option">
-            <span class="coman" id="first_line"></span>
-            <span class="coman" id="midel_line"></span>
-            <span class="coman" id="end_line"></span>
-          </div>
-          
-        </div>
-        <div class="menu-container" id="menu-list" style="display: flex;">
-          <ul
-            class="box_shadow menu-list box_no_dark_shadow light no_dark"
-          > 
-          
-            <li class="option_b">
-              <a href="#home">
-                <i class="bi bi-house"></i> <span>Home</span>
-              </a>
-            </li>
-            <li class="option_b">
-              <a href="#project">
-                <i class="bi bi-briefcase"></i> <span>Project</span>
-              </a>
-            </li>
-            <!-- ! dark mode button -->
-            <li class="option_b">
-              <div class="dark-mode-toggle">
-                <input type="checkbox" id="dark-mode-toggle-checkbox" />
-                <label for="dark-mode-toggle-checkbox"></label>
-              </div>
-              <div class="mode_line">Dark Mode</div>
-            </li>
-          </ul>
-        </div>
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- <link rel="stylesheet" href="../Components/darkmode/dark.css" /> -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="light">
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="logo">My Portfolio</div>
+      <div class="menu">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contactcontact">Contact</a>
       </div>
-      
-        <div class="profile-card light  " id="home">
-          <div class="image">
+      <!-- menu button -->
+      <div class="togle_button" id="togle_button" onclick="menu_click()">
+        <span id="line_a"></span>
+        <span id="line_b"></span>
+        <span id="line_c"></span>
+      </div>
 
-            <img src="IMG-20241009-WA0022.jpg" alt="Profile Picture" class="profile-img">
-          </div>
-            <h1 class="name">karan kumar</h1>
-            <p class="bio">Web Developer from india. Passionate about coding and coffee.</p>
-            <button id="show_more_btn" onclick="showMore()">Show More</button>
-            <div id="more-info" class="more-info" style="display:flex;">
-                <p>Additional information about karan...</p>
+      <!-- menu toggle  -->
+      <div class="menu_togale" id="menu_togale">
+        <ul>
+          <li onclick="menu_click()"><a href="#about">About</a></li>
+          <li onclick="menu_click()"><a href="#projects">Projects</a></li>
+          <li onclick="menu_click()"><a href="#skills">Skills</a></li>
+          <li onclick="menu_click()"><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <main>
+      <!-- profile secation -->
+      <section class="profile_images_k">
+        <!-- left side image -->
+        <div class="image_b">
+          <span>
+            <span class="title title_a">Developer</span>
+            <span class="image_s img_a">
+              <img
+                src="../image/pexels-djordje-petrovic-590080-2102416.jpg"
+                alt="Profile Picture"
+              />
+            </span>
+          </span>
+          <span>
+            <span class="image_s img_b">
+              <img
+                src="../image/pexels-flodahm-699459.jpg"
+                alt="Profile Picture"
+              />
+            </span>
+            <span class="title title_b">Developer</span>
+          </span>
+
+          <span>
+            <span class="title title_c">Developer</span>
+            <span class="image_s img_c">
+              <img
+                src="../image/pexels-fauxels-3183165.jpg"
+                alt="Profile Picture"
+              />
+            </span>
+          </span>
+        </div>
+        <!-- profile image -->
+        <div class="profile-card">
+          <img src="../image/karan.png" alt="Profile Picture" />
+          <h1 class="name">Karan kumar</h1>
+          <p class="bio">
+            Web Developer from india. Passionate about coding and coffee.
+          </p>
+          <!-- <button onclick="showMore()">Show More</button> -->
+          <!-- <div class="show_more" id="more-info">
+            <p>Additional information about karan...</p>
+            <a
+              href="https://api.whatsapp.com/send/?phone=8538922663&text&type=phone_number&app_absent=0"
+            >
+              <button class="feedback_button">
+                <i class="fa-brands fa-whatsapp"></i>
+                <pre> Whatsapp</pre>
+              </button>
+            </a>
+            <a href="mailto:karankumar8538922663@gmail.com">
+              <button class="feedback_button">
+                <i class="fa-regular fa-envelope"></i>
+                <pre> Email</pre>
+              </button>
+            </a>
+            <a href="sms:8538922663">
+              <button class="feedback_button">
+                <i class="fa-solid fa-comment"></i>
+                <pre> Sms</pre>
+              </button>
+            </a>
+            <a href="tel:+918538922663">
+              <button class="feedback_button">
+                <i class="fa-solid fa-phone"></i>
+                <pre> Call</pre>
+              </button>
+            </a>
+          </div> -->
+        </div>
+        <!-- right side image -->
+        <div class="image_b">
+          <span>
+            <span class="title title_a">Developer</span>
+            <span class="image_s img_a">
+              <img
+                src="../image/pexels-shkrabaanthony-5816283.jpg"
+                alt="Profile Picture"
+              />
+            </span>
+          </span>
+          <span>
+            <span class="image_s img_b">
+              <img
+                src="../image/pexels-nguyendesigner-236397.jpg"
+                alt="Profile Picture"
+              />
+            </span>
+            <span class="title title_b">Developer</span>
+          </span>
+
+          <span>
+            <span class="title title_c">Developer</span>
+            <span class="image_s img_c">
+              <img
+                src="../image/pexels-fauxels-3184423.jpg"
+                alt="Profile Picture"
+              />
+            </span>
+          </span>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section id="about">
+        <h2>About Me</h2>
+        <p>
+          Hello! I'm karan, a coder passionate about coding. With a focus on web
+          development, I strive to create impactful and meaningful work.
+        </p>
+      </section>
+
+      <!-- Projects Section -->
+      <div class="line_l">
+        <span></span>
+      </div>
+      <section id="projects">
+        <h2>Projects</h2>
+        <p>
+          Here are some of the projects I have worked on. Each one showcases my
+          skills and dedication to solving problems creatively.
+        </p>
+
+        <div class="projects">
+          <div class="project">
+            <div class="image">
+              <span>
+                <img src="../image/headphone.jpeg" alt="Project Image" />
+              </span>
+              <span>
+                <img src="./image/headphone.jpeg" alt="Project Image" />
+              </span>
+              <span>
+                <img src="../image/headphone.jpeg" alt="Project Image" />
+              </span>
             </div>
-        </div>
-        <div class="socal_media">
-              <a
-                href="https://www.facebook.com/share/g6CULxzUt6DLVopG/?mibextid=qi2Omg"
+            <div class="description">
+              <h3>E-commerce Website backend and frontend and designe</h3>
+              <p class="description_p" id="dec">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Aspernatur sit eius laboriosam laudantium facilis ea accusamus
+                corporis, quam totam vero mollitia eligendi fugit sunt ab ad at
+                velit ut alias? Iusto cumque a, quia alias accusantium
+                laboriosam ex voluptate! Esse, atque veniam quibusdam voluptatum
+                fuga amet eaque reprehenderit saepe rem magnam velit fugiat
+                cupiditate pariatur? Corrupti id voluptas accusamus adipisci?
+                Amet ex aut officiis, delectus sapiente facere officia porro
+                explicabo velit. Iure id ratione officia aliquam rerum neque.
+                Quibusdam quam consequatur voluptatem facere optio est
+                laudantium aspernatur nulla sint. Laboriosam. Minima eaque
+                aliquid vel alias quod placeat eius eum, quis ab! Eveniet
+                quaerat voluptates illo ullam quis ratione necessitatibus
+                dignissimos quisquam in atque, dolorem alias expedita aperiam.
+                Accusantium, eos. Ad! Facilis saepe illo ad in animi cum
+                incidunt esse voluptate quasi, architecto sit maxime harum
+                facere consequuntur officia ex ut! Eos quidem deleniti
+                consectetur dicta officiis distinctio debitis, voluptate quasi.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Repellat culpa alias reprehenderit pariatur quisquam, suscipit
+                commodi dolorum laboriosam nesciunt, tempore sed blanditiis non
+                ratione quae. Suscipit maiores magni asperiores eum! Error
+                veniam, exercitationem voluptatum ipsum aliquam nobis suscipit
+                eligendi explicabo expedita provident. Ut, corrupti voluptates
+                esse voluptas ad atque quaerat placeat quis! Ipsa amet tempora,
+                voluptas distinctio odit quaerat beatae? Alias, perferendis
+                dignissimos quasi consequuntur facere velit quae quisquam
+                commodi? Eum architecto in at labore saepe repellendus illum
+                eligendi iure. Repellat praesentium sint aspernatur inventore
+                adipisci aliquam non soluta odit!
+              </p>
+              <span id="show_more_text" class="show_more_button"
+                >..Show more</span
               >
-                <i class="fa-brands fa-facebook"></i>
-              </a>
-
-            <!-- ! Instagram M -->
-
-              <a href="https://www.instagram.com/karan_kgr/">
-                <i class="fa-brands fa-instagram"></i>
-              </a>
-
-            <!-- ! Lindedin M -->
-
-              <a href="https://www.linkedin.com/in/karan-kumar-306a27273">
-                <i class="fa-brands fa-linkedin"></i>
-              </a>
-
-            <!-- ! twitter M-->
-
-              <a href="https://x.com/Karan7352590?t=hPMORdpRBrhYPjMc0Y1Mkw&s=09">
-                <i class="fa-brands fa-twitter"></i>
-              </a>
-
-            <!-- ! Github M-->
-
-              <a href="https://github.com/india-software-karan">
-                <i class="fa-brands fa-github"></i>
-              </a>
-  
+              <div class="buttons">
+                <button class="github-button">View on GitHub</button>
+                <button class="live-button">Live Demo</button>
+              </div>
+            </div>
+          </div>
+          <div class="project">
+            <div class="image_mobile">
+              <span>
+                <img src="../image/headphone.jpeg" alt="Project Image" />
+              </span>
+              <span>
+                <img src="../image/headphone.jpeg" alt="Project Image" />
+              </span>
+              <span>
+                <img src="../image/headphone.jpeg" alt="Project Image" />
+              </span>
+            </div>
+            <div class="description">
+              <h3>Product trackig system backend and frontend and designe</h3>
+              <p class="description_p" id="dec">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Aspernatur sit eius laboriosam laudantium facilis ea accusamus
+                corporis, quam totam vero mollitia eligendi fugit sunt ab ad at
+                velit ut alias? Iusto cumque a, quia alias accusantium
+                laboriosam ex voluptate! Esse, atque veniam quibusdam voluptatum
+                fuga amet eaque reprehenderit saepe rem magnam velit fugiat
+                cupiditate pariatur? Corrupti id voluptas accusamus adipisci?
+                Amet ex aut officiis, delectus sapiente facere officia porro
+                explicabo velit. Iure id ratione officia aliquam rerum neque.
+                Quibusdam quam consequatur voluptatem facere optio est
+                laudantium aspernatur nulla sint. Laboriosam. Minima eaque
+                aliquid vel alias quod placeat eius eum, quis ab! Eveniet
+                quaerat voluptates illo ullam quis ratione necessitatibus
+                dignissimos quisquam in atque, dolorem alias expedita aperiam.
+                Accusantium, eos. Ad! Facilis saepe illo ad in animi cum
+                incidunt esse voluptate quasi, architecto sit maxime harum
+                facere consequuntur officia ex ut! Eos quidem deleniti
+                consectetur dicta officiis distinctio debitis, voluptate quasi.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Repellat culpa alias reprehenderit pariatur quisquam, suscipit
+                commodi dolorum laboriosam nesciunt, tempore sed blanditiis non
+                ratione quae. Suscipit maiores magni asperiores eum! Error
+                veniam, exercitationem voluptatum ipsum aliquam nobis suscipit
+                eligendi explicabo expedita provident. Ut, corrupti voluptates
+                esse voluptas ad atque quaerat placeat quis! Ipsa amet tempora,
+                voluptas distinctio odit quaerat beatae? Alias, perferendis
+                dignissimos quasi consequuntur facere velit quae quisquam
+                commodi? Eum architecto in at labore saepe repellendus illum
+                eligendi iure. Repellat praesentium sint aspernatur inventore
+                adipisci aliquam non soluta odit!
+              </p>
+              <span id="show_more_text" class="show_more_button"
+                >..Show more</span
+              >
+              <div class="buttons">
+                <button class="github-button">View on GitHub</button>
+                <button class="live-button">Live Demo</button>
+              </div>
+            </div>
+            <div class="image_destop">
+              <span>
+                <img src="../image/headphone.jpeg" alt="Project Image" />
+              </span>
+              <span>
+                <img src="../image/headphone.jpeg" alt="Project Image" />
+              </span>
+              <span>
+                <img src="../image/headphone.jpeg" alt="Project Image" />
+              </span>
+            </div>
+          </div>
+          <div class="project">
+            <div class="image">
+              <span>
+                <img src="../image/headphone.jpeg" alt="Project Image" />
+              </span>
+              <span>
+                <img src="../image/headphone.jpeg" alt="Project Image" />
+              </span>
+              <span>
+                <img src="../image/headphone.jpeg" alt="Project Image" />
+              </span>
+            </div>
+            <div class="description">
+              <h3>Chatting application backend and frontend and designe</h3>
+              <p class="description_p" id="dec">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Aspernatur sit eius laboriosam laudantium facilis ea accusamus
+                corporis, quam totam vero mollitia eligendi fugit sunt ab ad at
+                velit ut alias? Iusto cumque a, quia alias accusantium
+                laboriosam ex voluptate! Esse, atque veniam quibusdam voluptatum
+                fuga amet eaque reprehenderit saepe rem magnam velit fugiat
+                cupiditate pariatur? Corrupti id voluptas accusamus adipisci?
+                Amet ex aut officiis, delectus sapiente facere officia porro
+                explicabo velit. Iure id ratione officia aliquam rerum neque.
+                Quibusdam quam consequatur voluptatem facere optio est
+                laudantium aspernatur nulla sint. Laboriosam. Minima eaque
+                aliquid vel alias quod placeat eius eum, quis ab! Eveniet
+                quaerat voluptates illo ullam quis ratione necessitatibus
+                dignissimos quisquam in atque, dolorem alias expedita aperiam.
+                Accusantium, eos. Ad! Facilis saepe illo ad in animi cum
+                incidunt esse voluptate quasi, architecto sit maxime harum
+                facere consequuntur officia ex ut! Eos quidem deleniti
+                consectetur dicta officiis distinctio debitis, voluptate quasi.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Repellat culpa alias reprehenderit pariatur quisquam, suscipit
+                commodi dolorum laboriosam nesciunt, tempore sed blanditiis non
+                ratione quae. Suscipit maiores magni asperiores eum! Error
+                veniam, exercitationem voluptatum ipsum aliquam nobis suscipit
+                eligendi explicabo expedita provident. Ut, corrupti voluptates
+                esse voluptas ad atque quaerat placeat quis! Ipsa amet tempora,
+                voluptas distinctio odit quaerat beatae? Alias, perferendis
+                dignissimos quasi consequuntur facere velit quae quisquam
+                commodi? Eum architecto in at labore saepe repellendus illum
+                eligendi iure. Repellat praesentium sint aspernatur inventore
+                adipisci aliquam non soluta odit!
+              </p>
+              <span id="show_more_text" class="show_more_button"
+                >..Show more</span
+              >
+              <div class="buttons">
+                <button class="github-button">View on GitHub</button>
+                <button class="live-button">Live Demo</button>
+              </div>
+            </div>
+          </div>
         </div>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit reiciendis amet officia quos quas recusandae suscipit laudantium. Deserunt repudiandae, saepe veritatis soluta maxime, incidunt temporibus iusto distinctio, quia libero optio.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel voluptatem suscipit dolor nostrum exercitationem explicabo. Neque totam sapiente dolore amet velit consequuntur. Fugit cumque mollitia ipsa quae nam! Fugit, et?
-        Consequuntur dolore tempora, iure adipisci sunt at rem quas natus omnis, dicta deleniti. Repellat, corporis quae! Error iusto magni aliquam facere ratione veniam maiores ipsum recusandae reiciendis. Quidem, ipsa sed.
-        Quas non voluptate aut iste corporis at, ipsa nulla molestias, quaerat consequuntur voluptas eos dolor provident a officia natus earum ad neque distinctio, repellendus quia aliquid. Omnis maxime ipsum aliquid.
-        Dicta et rem quae quisquam recusandae deserunt ex ullam nisi! In assumenda accusamus veritatis ad repudiandae quisquam dolores quibusdam ab consectetur ipsa, alias adipisci dolorem sed facilis, sequi optio iste.
-        Sed in, ad voluptatum tempore magni modi enim, placeat quas, aliquam tenetur excepturi aperiam voluptates! Autem neque voluptate quam adipisci recusandae nulla corrupti quis. Ad iure quasi illo quas voluptates.
-        Ea dolorem rem, rerum perspiciatis corrupti ab doloribus illo incidunt magni ullam ad odio, consectetur animi inventore, numquam eos iure sed unde. Illum molestias adipisci excepturi nostrum! Natus, cupiditate quos?
-        Vitae, expedita error. Vel cupiditate vitae ex unde qui labore cumque nostrum expedita dicta modi animi, voluptatum aliquam aperiam? Reprehenderit minus tenetur dolores voluptate accusantium ea eveniet veniam cum amet?
-        Suscipit delectus in inventore eos vel, quae harum quisquam eligendi earum impedit tenetur modi. Iure nam harum minima. Modi, voluptatum vero dolores cum minima totam maiores odio officiis possimus? Ab.
-        Architecto excepturi odio ullam expedita aperiam, vel officia maiores, perspiciatis autem soluta similique exercitationem alias quas reiciendis perferendis, sint corrupti dignissimos cumque saepe libero cum doloribus sed. Debitis, porro blanditiis.
-        Modi totam aliquam repellat officia minus. Impedit ullam assumenda error, eligendi delectus laborum minima voluptas placeat eveniet sequi laboriosam eaque itaque aspernatur recusandae, ab ex temporibus illo reprehenderit nam beatae!
-        Natus, eveniet libero sapiente consequuntur perferendis dolorum expedita. Eaque hic facere distinctio quo quaerat in! Dignissimos quia, incidunt pariatur autem reprehenderit necessitatibus voluptatem. Harum nesciunt asperiores nam facere, incidunt maiores?
-        Cumque iste quae libero, suscipit minima aut quo. Voluptatem voluptatum, assumenda voluptas veritatis consequuntur a laboriosam quos facilis alias ea odio, praesentium delectus, natus ipsam illum distinctio! Animi, consequuntur deleniti?
-        Incidunt mollitia vero suscipit explicabo deserunt aliquam reiciendis, ut molestiae corporis omnis aliquid dicta impedit fugit sint, laborum facere dolores magnam architecto. Magni facilis dolor incidunt nam id ad repudiandae.
-        Et aliquam dolor nostrum pariatur, facilis totam ratione cum delectus! Dolore voluptatibus quaerat sed quo, a eos. Veniam deleniti rem consectetur distinctio itaque enim esse suscipit accusantium. Dolorum, molestias aliquid.
-        Harum temporibus esse pariatur sunt, qui ea? Repellat ratione voluptatibus illum facilis dolor, illo perferendis fugiat soluta, animi nostrum, deleniti cum aliquam aliquid laboriosam eaque mollitia odio tempora quos molestiae!
-        Iusto eum dicta, sunt dolorem voluptate vel alias dolor vitae, facilis quaerat sit suscipit. Quam quisquam, cumque officiis totam dolores expedita voluptatum, quia ratione asperiores consequatur deleniti? Laborum, debitis aperiam.
-        Sed debitis non quae dolorum aliquid ratione recusandae, inventore illo nobis repellat quisquam voluptatum soluta quod omnis ipsam quibusdam quaerat at libero harum. Facilis error at libero culpa, officiis earum?
-        Voluptates temporibus officia accusantium, veritatis a quae ipsum! Ullam, repudiandae amet porro quam perspiciatis, soluta molestias rem sapiente quos delectus voluptatem? Saepe excepturi ullam necessitatibus laboriosam illo sapiente perferendis at.
-        Exercitationem, asperiores aliquid. Aliquid aliquam corporis, nihil minima rem repudiandae aperiam praesentium nostrum accusamus! In rem qui dolor dolorum, cupiditate voluptates, veniam ullam, impedit esse possimus quidem eos ut maxime.
-        Quo iure aliquid sequi corporis asperiores exercitationem sunt blanditiis ipsam voluptates tempora commodi et vel sed impedit tenetur debitis, dolores, nulla vero cum nihil soluta possimus, hic nostrum. Officia, dolorem?
+      </section>
 
+      <!-- Skills Section -->
+      <div class="line_l">
+        <span></span>
+      </div>
+      <section id="skills">
+        <h2>Skills</h2>
+        <p>
+          Throughout my career, I have developed expertise in [Skill 1], [Skill
+          2], and [Skill 3]. I'm always eager to learn and grow.
+        </p>
+      </section>
 
-        <div class="" id="project">project</div>
+      <!-- Contact Section -->
+      <div class="line_l">
+        <span></span>
+      </div>
+      <section id="contactcontact">
+        <h2>Contact</h2>
+        <div class="socal_media">
+          <a
+            href="https://www.facebook.com/share/g6CULxzUt6DLVopG/?mibextid=qi2Omg"
+          >
+            <i class="fa-brands fa-facebook"></i>
+          </a>
 
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi totam rem ex quibusdam saepe aspernatur eligendi assumenda nostrum magnam fugit voluptatem ad nemo, nulla voluptates rerum voluptatibus adipisci id cupiditate.
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere eaque adipisci reprehenderit expedita minima, sunt odit vitae dignissimos iure pariatur quae? Mollitia dolorum at ipsa sint, impedit tenetur ex veniam?
-        Qui officiis deserunt totam ex quia, rem a hic asperiores maiores aliquam quas esse molestiae consectetur laudantium doloremque? Molestias inventore eos architecto aut, totam assumenda dolor tenetur voluptatem modi eaque.
-        Ipsa, dicta facilis non laborum repudiandae dignissimos unde illum eligendi, similique soluta odit quo quasi, ratione pariatur fugit cum. Neque ut id pariatur aspernatur perspiciatis amet libero deserunt voluptatem ratione.
-        Illo ullam rerum pariatur dolorem quos accusantium aliquid quidem dolores, sapiente amet molestias repudiandae iure quod nihil at maxime explicabo labore optio nesciunt fugit. Ut iste tempora reiciendis excepturi laborum?
-        Illum dolores quaerat sapiente beatae voluptatem sint, ipsum inventore assumenda, eligendi odio, non rerum corporis! Explicabo molestias sequi, harum beatae, assumenda incidunt veritatis eligendi libero a, est deleniti. Unde, adipisci.
-        Quibusdam nisi minima, atque voluptas, minus soluta modi enim numquam placeat fugiat, repellendus cumque eius dignissimos dolorem ipsa rerum illum sint quis iste ab pariatur ducimus ratione ex? Qui, asperiores?
-        Consequatur assumenda itaque, facilis tempora porro esse voluptatibus quisquam et quaerat eius non a hic eaque. Impedit deserunt, eius culpa necessitatibus eaque rem fugit sed aut. Reprehenderit asperiores maiores atque?
-        Odio quas aliquid est voluptatibus ipsa eum, error assumenda maxime officia maiores asperiores labore. Minus deleniti nesciunt, inventore maxime nulla, unde similique eaque eligendi laboriosam delectus, molestias fuga error quae!
-        Et accusamus esse placeat dignissimos magni delectus qui dolor! Maxime veniam tempore neque ab ipsa animi earum atque dolor esse aut, maiores distinctio corrupti dolorem commodi officiis ad, ducimus illum.
-        Nisi, repudiandae aperiam, maxime eum aliquid soluta, itaque accusamus eos quia tempora illo unde. Magni provident earum libero debitis sed veritatis doloribus recusandae? Nulla, commodi eos. Placeat vel obcaecati magnam.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit dignissimos a cum ipsum aut ea consectetur vitae quibusdam voluptatibus officiis aliquid maxime neque iusto, recusandae magnam, nisi minima soluta quasi?
-        Modi amet ipsum alias nisi, ratione doloremque corporis aliquid harum perspiciatis, debitis est sed suscipit, consectetur dolores culpa quam voluptatem consequuntur. Molestias atque doloribus rerum animi ut fuga eius provident?
-        Ab ex vero ullam ipsam, obcaecati eius a beatae nobis consequuntur quas quisquam dignissimos eveniet molestiae odio velit veniam fugit? Delectus harum ea doloribus facere fugiat cupiditate tempore nostrum est.
-        Velit, beatae officia recusandae ratione adipisci aut assumenda laboriosam facilis obcaecati numquam aspernatur repellendus optio asperiores voluptatum praesentium odit totam quis fugit nobis aliquam? Repellendus accusantium soluta laudantium eum necessitatibus?
-        Facilis dolor voluptatum laboriosam libero nihil beatae rerum voluptate delectus culpa maxime nam consequatur unde asperiores blanditiis illum ut perspiciatis voluptas, tempore quos a, est repellendus fuga aliquid! Vitae, nihil!
-        Saepe non nam laudantium dolores quo cupiditate nobis labore eveniet animi quisquam rerum ea a accusantium, nostrum dolorem itaque commodi perferendis corporis quaerat quae tempore eos, inventore aut earum! Cum?
-        Mollitia natus voluptas rerum nisi illum adipisci veniam neque ratione eius. Nisi sequi repellendus ipsam aliquid enim maxime eius numquam quisquam inventore, quas molestiae optio porro aut fuga magnam magni?
-        Repellendus qui quae nesciunt et quia rerum, blanditiis dolore! Voluptate necessitatibus quaerat molestiae possimus nesciunt hic rem iusto totam, accusamus nulla architecto amet pariatur natus ullam facilis soluta delectus sequi?
-        Mollitia quisquam molestiae quod laudantium sed voluptatum aliquid quis quos doloribus praesentium molestias odit accusamus ab perspiciatis rerum temporibus ipsam, amet nobis sint, ducimus nemo, minima itaque expedita. Aut, officiis!
-        Vitae dolorem veniam vel, voluptas quisquam nihil aut saepe in asperiores id harum ab atque sunt iste eum! At praesentium officiis maxime repudiandae voluptatum quos impedit corporis libero esse itaque.
-        Culpa nam natus animi saepe beatae molestias itaque perferendis iure dolorem! Iure voluptatum sunt et assumenda! Quod tempora libero expedita quas, consequuntur natus nemo, voluptas ex, totam eveniet nam earum?
-        Quidem adipisci exercitationem quo voluptatibus quos deleniti, vitae ipsa a, ipsam doloribus obcaecati repellat ducimus ullam voluptate commodi rem dolores maiores iusto aliquam quas totam cum natus. Sunt, eligendi ducimus.
-        Soluta, aliquid nesciunt cum amet nam doloribus fugit officiis dicta earum id atque. Quia atque vel maiores temporibus excepturi velit molestiae obcaecati enim quisquam, alias, ducimus nulla repellat aspernatur est?
-        Sint sed quod provident! Nemo consectetur accusamus, alias eligendi dolores, illo ipsum libero labore perferendis corrupti ut provident. Cum in dignissimos praesentium aperiam voluptatem nobis magni corporis eveniet consequatur dicta.
-        Recusandae facilis aliquam voluptatum asperiores aperiam obcaecati atque illo ex alias officiis eos quam quod expedita, impedit eaque, aut velit voluptate provident maiores sit nobis. Rem, repellat? Commodi, ducimus illo!
-        Illo obcaecati repellendus laudantium! Dignissimos autem, reiciendis atque officiis doloribus nemo qui error corrupti vitae dolore quidem! Excepturi velit in nam, facere praesentium nemo? Temporibus debitis veniam odio modi natus.
-        Excepturi ipsam debitis mollitia quo iure quas natus saepe totam quae, accusamus neque voluptatum laborum et ipsum, rem sint consectetur quidem cupiditate. Repellendus laborum, ullam autem magnam modi voluptate vel?
-        Veniam culpa porro praesentium, vero incidunt exercitationem molestias quod saepe! Quidem, repellat. Fugiat debitis nostrum atque aspernatur laboriosam, error necessitatibus cupiditate nesciunt quasi vitae sunt nulla maiores reprehenderit tempora. Quisquam.
-        Numquam mollitia harum nemo eveniet aspernatur repellat, fugiat quas a provident vitae id totam veritatis eligendi, quibusdam architecto neque nesciunt dolore quidem iusto atque ipsa eum esse magni quam. Neque?
-        Beatae rem similique neque nisi eveniet blanditiis! Esse voluptates facere corporis mollitia, dolorum et quod officia fuga. Quis ex debitis perspiciatis numquam accusantium sunt quod officia reiciendis. Error, nulla debitis.
-</body>
-<script src="profile.js"></script>
-<script src="dark.js"></script>
-<script src="menu.js"></script>
+          <!-- ! Instagram M -->
+
+          <a href="https://www.instagram.com/karan_k_code/">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+
+          <!-- ! Lindedin M -->
+
+          <a href="https://www.linkedin.com/in/karan-kumar-306a27273">
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
+
+          <!-- ! twitter M-->
+
+          <a href="https://x.com/Karan7352590?t=hPMORdpRBrhYPjMc0Y1Mkw&s=09">
+            <i class="fa-brands fa-twitter"></i>
+          </a>
+
+          <!-- ! Github M-->
+
+          <a href="https://github.com/india-software-karan">
+            <i class="fa-brands fa-github"></i>
+          </a>
+        </div>
+        <p>
+          If you'd like to get in touch, feel free to reach out at
+          <a href="mailto:kitmoindia@gmail.com">karan@senme.com</a>.
+        </p>
+        <div class="contact-form">
+          <h1>Contact Us</h1>
+          <form id="contactForm">
+            <label for="name">Name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Your name"
+              required
+            />
+
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Your email"
+              required
+            />
+
+            <label for="message">Message</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="5"
+              placeholder="Your message"
+              required
+            ></textarea>
+
+            <button type="submit">Submit</button>
+          </form>
+          <p id="responseMessage" style="margin-top: 10px; color: green"></p>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2025 My Portfolio. All rights reserved.</p>
+      <div class="social-icons">
+        <a href="https://github.com/india-software-karan" target="_blank"
+          ><i class="fa-brands fa-github"></i> GitHub</a
+        >
+        <a
+          href="https://www.linkedin.com/in/karan-kumar-306a27273"
+          target="_blank"
+          ><i class="fa-brands fa-linkedin"></i> LinkedIn
+        </a>
+        <a
+          href="https://x.com/Karan7352590?t=hPMORdpRBrhYPjMc0Y1Mkw&s=09"
+          target="_blank"
+          ><i class="fa-brands fa-twitter"></i> Twitter</a
+        >
+      </div>
+    </footer>
+  </body>
+  <script src="script.js"></script>
 </html>

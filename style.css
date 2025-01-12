@@ -1,0 +1,490 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+.dm-serif-text-regular {
+  font-family: "DM Serif Text", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  flex-direction: column;
+  /* background-color: rgba(69, 70, 72, 0.813); */
+  /* color: #ffff; */
+}
+
+.line_l {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.line_l > span {
+  width: 90%;
+  height: 1px;
+  background-color: #2f2e2e3c;
+}
+
+/* navbar style*/
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #333;
+  color: white;
+}
+
+.togle_button {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.togle_button > span {
+  display: block;
+  background-color: #fff;
+  border-radius: 2px;
+  width: 25px;
+  height: 2px;
+  transition: all 0.2s ease-in-out;
+}
+
+.line_a {
+  transform: rotate(35deg);
+  transform-origin: left;
+}
+
+.line_c {
+  transform: rotate(-35deg);
+  transform-origin: left;
+}
+
+.line_b {
+  opacity: 0;
+}
+
+.menu_togale {
+  position: fixed;
+  right: -220px;
+  top: 3.7rem;
+  background-color: #333;
+  padding: 5px;
+  z-index: 2;
+  transition: all 0.2s ease;
+}
+/* .menu_show {
+  right: 0px;
+}
+.menu_show_none {
+  right: -220px;
+} */
+.menu_togale > ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.menu_togale > ul > li {
+  &:hover {
+    background-color: #333;
+  }
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  margin: 0 1rem;
+  transition: color 0.3s;
+}
+
+.navbar a:hover {
+  color: #00bcd4;
+  text-decoration: underline;
+}
+
+.navbar .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.menu {
+  display: flex;
+}
+/* Section Styles */
+section {
+  margin: 2rem auto;
+  width: 100%;
+}
+
+section h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+section p {
+  text-align: center;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* Footer Styles */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem 2rem;
+  position: relative;
+}
+
+footer a {
+  color: #00bcd4;
+  text-decoration: none;
+  margin: 0 0.5rem;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+footer .social-icons {
+  margin-top: 0.5rem;
+}
+
+footer .social-icons a {
+  margin: 0 0.5rem;
+}
+
+a {
+  color: inherit; /* Isse anchor tag apne parent element `ka color inherit karega */
+  text-decoration: none;
+}
+
+main {
+  width: 100%;
+  position: relative;
+  /* background-color: gray; */
+}
+
+/* profile  */
+
+.profile_images_k {
+  height: 100%;
+  display: flex;
+  gap: 10px;
+  justify-content: space-around;
+}
+
+.image_b {
+  width: 30%;
+  display: flex;
+  gap: 10px;
+}
+.image_b > span {
+  width: 33%;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+.image_b > span > .title {
+  display: flex;
+  flex-direction: column;
+  font-size: 2rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  height: 15%;
+  align-items: center;
+  text-shadow: 0 0 20px rgba(68, 39, 234, 0.941);
+  opacity: 0;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+.title_a,
+.title_c {
+  justify-content: flex-end;
+}
+
+.image_b > span > .image_s {
+  /* position: absolute; */
+  width: 100%;
+  height: 85%;
+  aspect-ratio: 1/2;
+  object-fit: cover;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  border-radius: 1rem;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.333);
+  transition: all 0.3s ease;
+}
+
+.image_b > span > .image_s > img {
+  height: 100%;
+}
+
+.image_b > span:hover {
+  width: 100%;
+  .title {
+    opacity: 1;
+  }
+}
+
+.profile-card {
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 400px;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.459);
+}
+
+.profile-card > img {
+  aspect-ratio: 1/1;
+  width: 100%;
+}
+
+.name {
+  font-size: 1.5rem;
+  margin: 10px 0;
+}
+
+.bio {
+  font-size: 1.2rem;
+}
+
+/* projects */
+
+#projects > h2 {
+  font-size: 3rem;
+}
+
+#projects > p {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.projects {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.projects > .project {
+  display: flex;
+  align-items: flex-start;
+}
+.project > .description {
+  margin-left: 20px;
+}
+
+.project > .description > h3 {
+  margin: 10px 0 10px 10px;
+  font-size: 1.8rem;
+  display: flex;
+  justify-content: center;
+}
+.project > .description > p {
+  font-size: 1.2rem;
+  text-align: left;
+  max-height: 300px;
+  overflow: hidden;
+  margin-bottom: 10px;
+
+  transition: all 0.3s ease;
+}
+
+.project > .description > span {
+  font-size: 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+  color: #00bcd4;
+  transition: all 0.2s ease;
+}
+
+.project > .description > .buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 0 0 0;
+  gap: 20px;
+}
+.description > .buttons > button {
+  padding: 7px;
+  border-radius: 7px;
+  border: none;
+  color: #293435;
+  font-weight: 600;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  &:hover {
+    background-color: #84808092;
+  }
+}
+
+.project > .image,
+.image_destop {
+  width: 44%;
+  display: flex;
+  gap: 10px;
+}
+
+.image_mobile {
+  display: none;
+  gap: 10px;
+}
+
+.project > .image > span,
+.image_destop > span,
+.image_mobile > span {
+  width: 33%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  border-radius: 2rem;
+  cursor: pointer;
+}
+.project > .image > span > img,
+.image_destop > span > img,
+.image_mobile > span > img {
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
+
+.project > .image > span:hover {
+  width: 100%;
+}
+.image_destop > span:hover {
+  width: 100%;
+}
+
+/* ! contact */
+
+#contactcontact {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#contactcontact > h2 {
+  font-size: 2.5rem;
+}
+
+/* socal_media */
+
+.socal_media {
+  display: flex;
+  font-size: 1.7rem;
+  gap: 2rem;
+  color: #293435;
+  transition: all 0.3s ease;
+}
+.socal_media > a {
+  transition: all 0.3s ease;
+}
+
+.socal_media > a:hover {
+  transform: scale(1.2);
+  text-shadow: 0 0 10px rgba(68, 39, 234, 0.829);
+}
+
+#contactcontact > p {
+  font-size: 1.5rem;
+}
+.contact-form {
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0px 6px rgba(0, 0, 0, 0.1);
+  width: 88%;
+  max-width: 400px;
+}
+.contact-form h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+.contact-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #555;
+}
+.contact-form input,
+.contact-form textarea {
+  width: 90%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+
+  &:focus {
+    outline: none;
+  }
+}
+.contact-form button {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+}
+.contact-form button:hover {
+  background: #0056b3;
+}
+
+@media (max-width: 700px) {
+  .profile-card {
+    width: 80%;
+  }
+  .togle_button {
+    display: flex;
+  }
+  .menu {
+    display: none;
+  }
+  .image_b {
+    display: none;
+  }
+  .project {
+    flex-direction: column;
+  }
+  .image_mobile {
+    display: flex;
+  }
+  .project > .image,
+  .image_mobile {
+    width: 100%;
+    overflow: auto;
+  }
+  .project > .image > span,
+  .image_mobile > span {
+    width: 100%;
+    overflow: initial;
+  }
+
+  .image_destop {
+    display: none;
+  }
+}
+@media (max-width: 800px) {
+}

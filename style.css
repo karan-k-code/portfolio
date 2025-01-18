@@ -232,10 +232,12 @@ main {
 
 .image_b > span > .image_s > img {
   height: 100%;
+  transition: all 0.3s ease;
 }
 
 .image_b > span:hover {
   width: 100%;
+  /* -webkit-box-reflect: below 3px linear-gradient(transparent, #ffffff91); */
   .title {
     opacity: 1;
   }
@@ -450,6 +452,24 @@ main {
 }
 .contact-form button:hover {
   background: #0056b3;
+}
+/* ! about */
+
+.resum {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.resum > a {
+  display: flex;
+  padding: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.34);
+  font-size: 1.2rem;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  &:hover {
+    background-color: #f0f0f0;
+  }
 }
 
 @media (max-width: 700px) {

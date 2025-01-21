@@ -47,7 +47,7 @@
         <!-- left side image -->
         <div class="image_b">
           <span>
-            <span class="title title_a">Developer</span>
+            <span class="title title_a">Coding</span>
             <span class="image_s img_a">
               <img
                 src="./image/pexels-djordje-petrovic-590080-2102416.jpg"
@@ -62,11 +62,11 @@
                 alt="Profile Picture"
               />
             </span>
-            <span class="title title_b">Developer</span>
+            <span class="title title_b">Designing</span>
           </span>
 
           <span>
-            <span class="title title_c">Developer</span>
+            <span class="title title_c">Faster</span>
             <span class="image_s img_c">
               <img
                 src="./image/pexels-fauxels-3183165.jpg"
@@ -86,7 +86,7 @@
         <!-- right side image -->
         <div class="image_b">
           <span>
-            <span class="title title_a">Developer</span>
+            <span class="title title_a">Planning</span>
             <span class="image_s img_a">
               <img
                 src="./image/pexels-shkrabaanthony-5816283.jpg"
@@ -101,11 +101,11 @@
                 alt="Profile Picture"
               />
             </span>
-            <span class="title title_b">Developer</span>
+            <span class="title title_b">New Ideas</span>
           </span>
 
           <span>
-            <span class="title title_c">Developer</span>
+            <span class="title title_c">Team work</span>
             <span class="image_s img_c">
               <img
                 src="./image/pexels-fauxels-3184423.jpg"
@@ -145,13 +145,22 @@
           <div class="project">
             <div class="image">
               <span>
-                <img src="./image/headphone.jpeg" alt="Project Image" />
+                <img
+                  src="./image/pexels-cottonbro-7430341.jpg"
+                  alt="Project Image"
+                />
               </span>
               <span>
-                <img src="./image/headphone.jpeg" alt="Project Image" />
+                <img
+                  src="./image/pexels-cottonbro-7430341.jpg"
+                  alt="Project Image"
+                />
               </span>
               <span>
-                <img src="./image/headphone.jpeg" alt="Project Image" />
+                <img
+                  src="./image/pexels-cottonbro-7430341.jpg"
+                  alt="Project Image"
+                />
               </span>
             </div>
             <div class="description">
@@ -376,7 +385,7 @@
         </p>
         <div class="contact-form">
           <h1>Contact Us</h1>
-          <form id="contactForm">
+          <form id="contactForm" name="contactus">
             <label for="name">Name</label>
             <input
               type="text"
@@ -410,6 +419,23 @@
         </div>
       </section>
     </main>
+
+    <!-- rating -->
+    <div id="rating_box" class="rating rating-container">
+      <h1>Rate Us!</h1>
+      <span onclick="closeButton()">
+        <i class="fa-solid fa-xmark"></i>
+      </span>
+      <div class="stars star_group">
+        <button data-value="5">&#9733;</button>
+        <button data-value="4">&#9733;</button>
+        <button data-value="3">&#9733;</button>
+        <button data-value="2">&#9733;</button>
+        <button data-value="1">&#9733;</button>
+      </div>
+      <div class="rating-value">Rating: <span id="rating">0</span>/5</div>
+      <button class="submit-button" id="rating_subnit">Submit</button>
+    </div>
 
     <!-- Footer -->
     <footer>

@@ -1,3 +1,7 @@
+// const urls = "https://kitmo.onrender.com/api/v1";
+
+const urls = "http://127.0.0.1:4000/api/v1";
+
 const showMore = () => {
   const moreBtn = document.querySelector("#more-info");
   //   moreBtn.style.display = moreBtn.style.display == "flex" ? "none" : "flex";
@@ -35,15 +39,28 @@ const menu_click = () => {
 
 document
   .getElementById("contactForm")
-  .addEventListener("submit", function (event) {
+  .addEventListener("submit", async (event) => {
     event.preventDefault(); // Prevent form from refreshing the page
 
-    const name = document.getElementById("name").value;
-    const email = document.getElementById("email").value;
-    const message = document.getElementById("message").value;
+    // const fordat = document.getElementById("contactForm");
+    const fordat = document.forms["contactus"];
 
-    // Mock form submission
-    console.log("Form submitted:", { name, email, message });
+    const data = new FormData(fordat);
+    console.log(data);
+
+    const url = urls + "/feedback/contactus";
+
+    const response = await fetch(url, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: data,
+      redirect: "follow",
+      credentials: "include",
+    });
+
+    console.log(response);
 
     // Show response message
     const responseMessage = document.getElementById("responseMessage");
@@ -95,4 +112,92 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
       behavior: "smooth",
     });
   });
+});
+
+// ! rating
+
+try {
+  const stars = document.querySelectorAll(".stars button");
+  const ratingValue = document.getElementById("rating");
+  const ratingSubnit = document.getElementById("rating_subnit");
+
+  let selectedRating = 0;
+
+  stars.forEach((star) => {
+    star.addEventListener("mouseover", () => {
+      resetStars();
+      // highlightStars(star.dataset.value);
+    });
+
+    star.addEventListener("click", () => {
+      selectedRating = star.dataset.value;
+      ratingValue.textContent = selectedRating;
+      highlightStars(star.dataset.value);
+    });
+
+    star.addEventListener("mouseout", () => {
+      // resetStars();
+      if (selectedRating) highlightStars(selectedRating);
+    });
+  });
+
+  function resetStars() {
+    stars.forEach((button) => {
+      button.classList.remove("active");
+    });
+  }
+
+  function highlightStars(value) {
+    stars.forEach((star) => {
+      if (star.dataset.value == value) {
+        star.classList.add("active");
+      }
+    });
+  }
+  ratingSubnit.addEventListener("click", () => {
+    closeButton();
+    localStorage.setItem("ratingData", "true");
+  });
+} catch (error) {}
+
+const closeButton = () => {
+  const rating_box = document.getElementById("rating_box");
+  if (rating_box.style.display == "none") {
+    rating_box.style.display = "flex";
+  } else {
+    rating_box.style.display = "none";
+  }
+};
+
+let ratingData = JSON.parse(localStorage.getItem("ratingData"));
+
+if (ratingData) {
+  closeButton();
+}
+
+// scroll
+
+let lastScrollTop = 0;
+
+const navbar = document.querySelector("nav");
+
+window.addEventListener("scroll", function () {
+  const scrollTop = window.scrollY || document.documentElement.scrollTop;
+
+  if (scrollTop > lastScrollTop) {
+    // Scroll down
+    navbar.style.position = "unset";
+    navbar.classList.remove("andown");
+    navbar.classList.add("anup");
+  } else if (lastScrollTop <= 100) {
+    //top
+    navbar.style.position = "unset";
+  } else {
+    // Scroll up
+    navbar.style.position = "fixed";
+    navbar.classList.add("andown");
+    navbar.classList.remove("anup");
+  }
+
+  lastScrollTop = scrollTop; // Update last scroll position
 });

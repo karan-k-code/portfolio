@@ -14,6 +14,7 @@
 
 body {
   flex-direction: column;
+  position: relative;
   /* background-color: rgba(69, 70, 72, 0.813); */
   /* color: #ffff; */
 }
@@ -32,16 +33,56 @@ body {
 }
 
 /* navbar style*/
+nav {
+  top: 0;
+  width: 100%;
+  z-index: 1;
+  transition: all 0.3s ease;
+}
+
+.andown {
+  transition: all 0.3s ease;
+  animation: moveAndScale 1s ease-out;
+}
+.anup {
+  transition: all 0.3s ease;
+  animation: navup 2s ease-out;
+}
+
+@keyframes moveAndScale {
+  0% {
+    transform: translateY(-100px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes navup {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100px);
+  }
+}
+
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
+  /* padding: 1rem 2rem; */
   background-color: #333;
   color: white;
 }
 
 .togle_button {
+  margin: 1rem;
   display: none;
   flex-direction: column;
   gap: 5px;
@@ -111,6 +152,8 @@ body {
 }
 
 .navbar .logo {
+  margin-left: 1rem;
+  margin: 1rem;
   font-size: 1.5rem;
   font-weight: bold;
 }
@@ -200,14 +243,16 @@ main {
 .image_b > span > .title {
   display: flex;
   flex-direction: column;
-  font-size: 2rem;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 600;
+  font-size: 2rem;
   height: 15%;
   align-items: center;
-  text-shadow: 0 0 20px rgba(68, 39, 234, 0.941);
+  overflow: hidden;
+  color: white;
+  text-shadow: 0 0 10px cyan, 0 0 20px cyan, 0 0 40px cyan, 0 0 80px cyan;
   opacity: 0;
-  color: #333;
+
   transition: all 0.3s ease;
 }
 
@@ -219,9 +264,9 @@ main {
 .image_b > span > .image_s {
   /* position: absolute; */
   width: 100%;
-  height: 85%;
+  height: 80%;
   aspect-ratio: 1/2;
-  object-fit: cover;
+  /* object-fit: cover; */
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -231,16 +276,16 @@ main {
 }
 
 .image_b > span > .image_s > img {
-  height: 100%;
+  /* height: 100%; */
   transition: all 0.3s ease;
 }
 
 .image_b > span:hover {
   width: 100%;
-  /* -webkit-box-reflect: below 3px linear-gradient(transparent, #ffffff91); */
   .title {
     opacity: 1;
   }
+  /* -webkit-box-reflect: below 3px linear-gradient(transparent, #ffffff91); */
 }
 
 .profile-card {
@@ -366,8 +411,11 @@ main {
 .project > .image > span > img,
 .image_destop > span > img,
 .image_mobile > span > img {
-  aspect-ratio: 1/1;
+  /* aspect-ratio: 1/1; */
+  max-height: 400px;
+
   object-fit: cover;
+  /* min-width: 100%; */
 }
 
 .project > .image > span:hover {
@@ -417,6 +465,7 @@ main {
   box-shadow: 0 0px 6px rgba(0, 0, 0, 0.1);
   width: 88%;
   max-width: 400px;
+  transition: all 0.3s ease;
 }
 .contact-form h1 {
   font-size: 24px;
@@ -455,6 +504,21 @@ main {
 }
 /* ! about */
 
+#about {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#about > h2 {
+  font-size: 2.5rem;
+}
+#about > p {
+  font-size: 1.2rem;
+}
+
 .resum {
   display: flex;
   align-items: center;
@@ -470,6 +534,91 @@ main {
   &:hover {
     background-color: #f0f0f0;
   }
+}
+
+/* ! rating */
+
+.rating-container {
+  text-align: center;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+}
+
+.rating {
+  display: flex;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  gap: 10px;
+  border-radius: 1rem;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #b4b0b0d6;
+  transition: all 0.3s ease;
+}
+.star_group {
+  display: flex;
+  font-size: 3rem;
+  gap: 10px;
+}
+
+.stars {
+  display: flex;
+  justify-content: center;
+  flex-direction: row-reverse;
+  gap: 10px;
+  /* margin-bottom: 20px; */
+}
+
+.stars button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 3rem;
+  color: #d3d3d3;
+  transition: color 0.3s;
+}
+
+.stars button.active,
+.stars button.active ~ button,
+.stars button:hover,
+.stars button:hover ~ button {
+  color: #ffd700;
+}
+
+.rating-value {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+.submit-button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+  background-color: #0056b3;
+}
+
+.rating > span {
+  position: absolute;
+  color: #272b2bc4;
+  top: 4px;
+  right: 7px;
+  font-size: 1.5rem;
+  cursor: pointer;
 }
 
 @media (max-width: 700px) {
@@ -500,6 +649,9 @@ main {
   .image_mobile > span {
     width: 100%;
     overflow: initial;
+  }
+  .image_mobile > span > img {
+    display: none;
   }
 
   .image_destop {

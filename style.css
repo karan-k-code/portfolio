@@ -50,9 +50,35 @@ nav {
 }
 
 /* ! skill */
+
+#skills > h2 {
+  font-size: 2.5rem;
+}
+
+#skills > p {
+  font-size: 1.2rem;
+}
+
+#skills > h3 {
+  font-size: 2rem;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: #ffffff;
+  font-weight: bolder;
+  border-top: 1px solid rgba(48, 16, 231, 0.265);
+  font-variant-caps: small-caps;
+  text-shadow: 0 0 10px rgb(26, 28, 28), 0 0 20px aqua, 0 0 40px rgb(58, 62, 62),
+    0 0 80px aqua, 0 0 160px aqua;
+}
+
 .Programming_language {
   display: flex;
   align-items: center;
+  width: 100%;
   justify-content: space-evenly;
 }
 
@@ -60,8 +86,10 @@ nav {
   display: flex;
   position: relative;
   /* background-color: #5a5454; */
-  height: 300px;
-  width: 300px;
+  max-width: 250px;
+  max-height: 250px;
+  width: 32%;
+  aspect-ratio: 1/1;
   align-items: center;
   justify-content: center;
   border-radius: 2rem;
@@ -85,7 +113,7 @@ nav {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: 1.8rem;
+  font-size: 1.7rem;
   font-weight: 600;
   background-color: #ffffff;
   width: 80%;
@@ -105,6 +133,13 @@ nav {
 
 .data_javascript {
   background: conic-gradient(#ef4de7 0% 75%, #969696b0 75% 100%);
+}
+
+.data_nodejs {
+  background: conic-gradient(#7f56da 0% 60%, #969696c1 60% 100%);
+}
+.data_mongodb {
+  background: conic-gradient(#ef4de7 0% 70%, #969696c1 70% 100%);
 }
 
 @keyframes moveAndScale {
@@ -714,6 +749,9 @@ main {
 
   .image_destop {
     display: none;
+  }
+  .language > span > span {
+    font-size: 0.8rem;
   }
 }
 @media (max-width: 800px) {

@@ -412,9 +412,35 @@ main {
   font-size: 3rem;
 }
 
+.desc {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 1rem;
+  border-radius: 1rem;
+  background-color: rgba(243, 238, 238, 0.9);
+}
+
+.desc > p {
+  color: #555;
+  line-height: 1;
+  text-align: start;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.desc > span {
+  font-weight: 600;
+  color: #373838;
+}
+
+.desc > ul {
+  margin-left: 2rem;
+  color: #3d3d3d;
+}
+
 #projects > p {
   font-size: 1.5rem;
-  margin-bottom: 10px;
   font-weight: 400;
   font-style: normal;
 }
@@ -429,7 +455,8 @@ main {
   align-items: flex-start;
 }
 .project > .description {
-  margin-left: 20px;
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 .project > .description > h3 {
@@ -438,29 +465,34 @@ main {
   display: flex;
   justify-content: center;
 }
-.project > .description > p {
+.project > .description > div {
   font-size: 1.2rem;
   text-align: left;
   max-height: 300px;
   overflow: hidden;
   margin-bottom: 10px;
-
   transition: all 0.3s ease;
 }
 
 .project > .description > span {
   font-size: 1.2rem;
   font-weight: 600;
+  margin-left: 1rem;
   cursor: pointer;
   color: #00bcd4;
   transition: all 0.2s ease;
+}
+
+.desc {
+  display: flex;
+  flex-direction: column;
 }
 
 .project > .description > .buttons {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 10px 0 0 0;
+  margin: 5px 0 0 0;
   gap: 20px;
 }
 .description > .buttons > button {
@@ -506,9 +538,7 @@ main {
 .image_mobile > span > img {
   /* aspect-ratio: 1/1; */
   max-height: 400px;
-
   object-fit: cover;
-  /* min-width: 100%; */
 }
 
 .project > .image > span:hover {
@@ -714,6 +744,44 @@ main {
   cursor: pointer;
 }
 
+/* ! show image box  */
+
+.show_image_box {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  gap: 10px;
+  /* border-radius: 1rem; */
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #b4b0b0d6;
+  max-width: 90%;
+  width: 80%;
+  max-height: 80vh;
+  height: 80vh;
+  z-index: 3;
+  transition: all 0.3s ease;
+}
+.show_image_box > img {
+  /* aspect-ratio: 3/1; */
+  width: 100%;
+  height: 100%;
+  object-fit: scale-down;
+}
+
+.closeButton_img {
+  position: absolute;
+  right: 6px;
+  top: 6px;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
 @media (max-width: 700px) {
   .profile-card {
     width: 80%;
@@ -740,11 +808,18 @@ main {
   }
   .project > .image > span,
   .image_mobile > span {
-    width: 100%;
+    width: auto;
     overflow: initial;
   }
   .image_mobile > span > img {
+    width: fit-content;
     display: none;
+  }
+  .project > .image > span:hover {
+    width: unset;
+  }
+  .image_destop > span:hover {
+    width: unset;
   }
 
   .image_destop {

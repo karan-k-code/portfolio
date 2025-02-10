@@ -84,7 +84,7 @@ show_more_buttons.forEach((button) => {
       x.target.innerText = "..Show more";
     } else {
       prevSibling.style.maxHeight = "100vh";
-      x.target.innerText = "..Show less";
+      x.target.innerText = "Show less";
     }
   });
 });
@@ -99,7 +99,7 @@ const des_show_more = () => {
     show_more_text.innerText = "..Show more";
   } else {
     dec.style.maxHeight = "100vh";
-    show_more_text.innerText = "..Show less";
+    show_more_text.innerText = "Show less";
   }
 };
 
@@ -115,7 +115,6 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
 });
 
 // ! rating
-
 try {
   const stars = document.querySelectorAll(".stars button");
   const ratingValue = document.getElementById("rating");
@@ -174,6 +173,27 @@ let ratingData = JSON.parse(localStorage.getItem("ratingData"));
 if (ratingData) {
   closeButton();
 }
+
+// ! close button
+const closeButton_img = () => {
+  const x_img_box = document.getElementById("show_image_box");
+  x_img_box.style.display = "none";
+};
+
+const image_click_show_img = (url) => {
+  const x_img_box = document.getElementById("show_image_box");
+  x_img_box.childNodes["1"].setAttribute("src", url);
+  x_img_box.style.display = "flex";
+};
+
+const image_fs = document.querySelectorAll(".t_img");
+
+image_fs.forEach((image) => {
+  image.addEventListener("click", (e) => {
+    const url = e.target.getAttribute("src");
+    image_click_show_img(url);
+  });
+});
 
 // scroll
 

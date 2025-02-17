@@ -15,7 +15,7 @@
   </head>
   <body class="light">
     <!-- Navbar -->
-    <nav class="navbar">
+    <nav class="navbar nav1">
       <div class="logo">My Portfolio</div>
       <div class="menu">
         <a href="#about">About</a>
@@ -23,6 +23,33 @@
         <a href="#skills">Skills</a>
         <a href="#contactcontact">Contact</a>
       </div>
+
+      <!-- menu button -->
+      <div class="togle_button" id="togle_button" onclick="menu_click()">
+        <span id="line_a" class="line_a1"></span>
+        <span id="line_b" class="line_b1"></span>
+        <span id="line_c" class="line_c1"></span>
+      </div>
+
+      <!-- menu toggle  -->
+      <div class="menu_togale" id="menu_togale">
+        <ul>
+          <li onclick="menu_click()"><a href="#about">About</a></li>
+          <li onclick="menu_click()"><a href="#projects">Projects</a></li>
+          <li onclick="menu_click()"><a href="#skills">Skills</a></li>
+          <li onclick="menu_click()"><a href="#contactcontact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <nav class="navbar nav2">
+      <div class="logo">My Portfolio</div>
+      <div class="menu">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contactcontact">Contact</a>
+      </div>
+
       <!-- menu button -->
       <div class="togle_button" id="togle_button" onclick="menu_click()">
         <span id="line_a"></span>
@@ -124,9 +151,7 @@
           development, I strive to create impactful and meaningful work.
         </p>
         <div class="resum">
-          <a href="./image/resum_karan.docx" download="resum_karan.docx"
-            >RESUM</a
-          >
+          <a href="./image/resum_karan.pdf" download="resum_karan.pdf">RESUM</a>
         </div>
       </section>
 
@@ -440,6 +465,7 @@
       </section>
     </main>
 
+    <!-- ! show image box  -->
     <div class="show_image_box" id="show_image_box">
       <img src="image/cart_show.png" />
       <span class="closeButton_img" onclick="closeButton_img()">

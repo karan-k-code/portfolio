@@ -17,6 +17,7 @@ const showMore = () => {
 const menu_click = () => {
   const toggleBtn = document.querySelector("#togle_button");
   const moreInfo = document.querySelector("#menu_togale");
+
   const line_a = document.querySelector("#line_a");
   const line_b = document.querySelector("#line_b");
   const line_c = document.querySelector("#line_c");
@@ -34,42 +35,6 @@ const menu_click = () => {
     line_c.classList.add("line_c");
   }
 };
-
-// ! contact us
-
-document
-  .getElementById("contactForm")
-  .addEventListener("submit", async (event) => {
-    event.preventDefault(); // Prevent form from refreshing the page
-
-    // const fordat = document.getElementById("contactForm");
-    const fordat = document.forms["contactus"];
-
-    const data = new FormData(fordat);
-    console.log(data);
-
-    const url = urls + "/feedback/contactus";
-
-    const response = await fetch(url, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: data,
-      redirect: "follow",
-      credentials: "include",
-    });
-
-    console.log(response);
-
-    // Show response message
-    const responseMessage = document.getElementById("responseMessage");
-    responseMessage.textContent =
-      "Thank you for your message! We will get back to you shortly.";
-
-    // Clear form fields
-    document.getElementById("contactForm").reset();
-  });
 
 // ! show more funcation p
 
@@ -199,25 +164,51 @@ image_fs.forEach((image) => {
 
 let lastScrollTop = 0;
 
-const navbar = document.querySelector("nav");
+const navbar = document.querySelector(".nav2");
 
 window.addEventListener("scroll", function () {
   const scrollTop = window.scrollY || document.documentElement.scrollTop;
 
   if (scrollTop > lastScrollTop) {
     // Scroll down
-    navbar.style.position = "unset";
     navbar.classList.remove("andown");
     navbar.classList.add("anup");
   } else if (lastScrollTop <= 100) {
     //top
-    navbar.style.position = "unset";
+    navbar.classList.add("anup");
+    navbar.classList.remove("andown");
   } else {
     // Scroll up
-    navbar.style.position = "fixed";
-    navbar.classList.add("andown");
     navbar.classList.remove("anup");
+    navbar.classList.add("andown");
   }
 
   lastScrollTop = scrollTop; // Update last scroll position
 });
+
+// ! contactus
+// contactus
+
+document
+  .getElementById("contactForm")
+  .addEventListener("submit", async function (event) {
+    event.preventDefault(); // Prevent page refresh
+
+    const url = `${urls}/feedback/contactus`;
+
+    let formData = new FormData(this);
+    // Fetch request
+    let response = await fetch(url, {
+      method: "POST",
+      body: formData, // Pass the FormData directly
+      redirect: "follow",
+      credentials: "include",
+    }).catch((error) => {
+      console.log(error);
+    });
+
+    const responseMessage = document.getElementById("responseMessage");
+    responseMessage.textContent =
+      "Thank you for your message! We will get back to you shortly.";
+    this.reset();
+  });

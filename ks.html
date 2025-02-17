@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Styled Details Toggle</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+      }
+      .toggle-btn {
+        background-color: #007bff;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        font-size: 16px;
+        border-radius: 5px;
+        margin-bottom: 10px;
+      }
+      .toggle-btn:hover {
+        background-color: #0056b3;
+      }
+      .details-content {
+        display: none;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        margin-top: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="toggle-btn" onclick="toggleDetails()">Show Details</button>
+    <div class="details-content">
+      <p>This is the hidden content that appears when you click the button.</p>
+      <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+      </ul>
+    </div>
+
+    <script>
+      function toggleDetails() {
+        const details = document.querySelector(".details-content");
+        const button = document.querySelector(".toggle-btn");
+        if (details.style.display === "none" || details.style.display === "") {
+          details.style.display = "block";
+          button.textContent = "Hide Details";
+        } else {
+          details.style.display = "none";
+          button.textContent = "Show Details";
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -40,13 +40,19 @@ nav {
   transition: all 0.3s ease;
 }
 
+.nav2 {
+  position: fixed;
+}
+
 .andown {
   transition: all 0.3s ease;
   animation: moveAndScale 1s ease-out;
+  top: 0;
 }
 .anup {
   transition: all 0.3s ease;
-  animation: navup 2s ease-out;
+  animation: navup 1s ease-out;
+  top: -100px;
 }
 
 /* ! skill */
@@ -374,7 +380,7 @@ main {
 }
 
 .image_b > span:hover {
-  width: 100%;
+  width: 90%;
   .title {
     opacity: 1;
   }

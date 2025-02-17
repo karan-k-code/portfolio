@@ -21,18 +21,27 @@ const menu_click = () => {
   const line_a = document.querySelector("#line_a");
   const line_b = document.querySelector("#line_b");
   const line_c = document.querySelector("#line_c");
+  const line_a_2 = document.querySelector("#line_a_2");
+  const line_b_2 = document.querySelector("#line_b_2");
+  const line_c_2 = document.querySelector("#line_c_2");
   moreInfo.classList.toggle("show_more_animation");
   if (moreInfo.style.right == "0px") {
     moreInfo.style.right = "-220px";
     line_a.classList.remove("line_a");
     line_b.classList.remove("line_b");
     line_c.classList.remove("line_c");
+    line_a_2.classList.remove("line_a");
+    line_b_2.classList.remove("line_b");
+    line_c_2.classList.remove("line_c");
     // moreInfo.style.display = "none";
   } else {
     moreInfo.style.right = "0px";
     line_a.classList.add("line_a");
     line_b.classList.add("line_b");
     line_c.classList.add("line_c");
+    line_a_2.classList.add("line_a");
+    line_b_2.classList.add("line_b");
+    line_c_2.classList.add("line_c");
   }
 };
 
@@ -187,7 +196,6 @@ window.addEventListener("scroll", function () {
 });
 
 // ! contactus
-// contactus
 
 document
   .getElementById("contactForm")

@@ -501,7 +501,7 @@ main {
   margin: 5px 0 0 0;
   gap: 20px;
 }
-.description > .buttons > button {
+.description > .buttons > a > button {
   padding: 7px;
   border-radius: 7px;
   border: none;
@@ -646,6 +646,7 @@ main {
 }
 #about > p {
   font-size: 1.2rem;
+  margin: 10px;
 }
 
 .resum {

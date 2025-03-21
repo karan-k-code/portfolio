@@ -668,6 +668,7 @@ main {
 /* ! rating */
 
 .rating-container {
+  display: none;
   text-align: center;
   background: #fff;
   padding: 20px;

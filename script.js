@@ -215,8 +215,10 @@ document
       console.log(error);
     });
 
-    const responseMessage = document.getElementById("responseMessage");
-    responseMessage.textContent =
-      "Thank you for your message! We will get back to you shortly.";
-    this.reset();
+    if (response.ok) {
+      const responseMessage = document.getElementById("responseMessage");
+      responseMessage.textContent =
+        "Thank you for your message! We will get back to you shortly.";
+      this.reset();
+    }
   });

@@ -10,61 +10,71 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 100vh;
+        /* height: 100vh; */
         margin: 0;
-        background-color: #f4f4f9;
       }
 
+      /* rating */
       .rating-container {
         text-align: center;
         background: #fff;
         padding: 20px;
         border-radius: 10px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         width: 300px;
       }
 
-      .rating-container h1 {
-        font-size: 1.5rem;
-        margin-bottom: 20px;
+      .rating {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 1rem;
+        gap: 10px;
+        border-radius: 1rem;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        background-color: #b4b0b0d6;
+        transition: all 0.3s ease;
+      }
+
+      .star_group {
+        display: flex;
+        font-size: 3rem;
+        gap: 10px;
       }
 
       .stars {
         display: flex;
         justify-content: center;
-        /* flex-direction: row-reverse; */
+        flex-direction: row-reverse;
         gap: 10px;
-        margin-bottom: 20px;
       }
 
       .stars button {
         background: none;
         border: none;
         cursor: pointer;
-        font-size: 2rem;
+        font-size: 3rem;
         color: #d3d3d3;
         transition: color 0.3s;
       }
 
-      /* .stars button.active, */
-
+      .stars button.active,
+      .stars button.active ~ button,
       .stars button:hover,
       .stars button:hover ~ button {
         color: #ffd700;
       }
 
-      /* .stars button.active {
-        color: #ffd700;
-      } */
-
       .rating-value {
         font-size: 1.2rem;
-        margin-top: 10px;
         color: #555;
       }
 
       .submit-button {
-        margin-top: 20px;
         padding: 10px 20px;
         border: none;
         background-color: #007bff;
@@ -78,56 +88,94 @@
       .submit-button:hover {
         background-color: #0056b3;
       }
+
+      .rating > span {
+        position: absolute;
+        color: #272b2bc4;
+        top: 4px;
+        right: 7px;
+        font-size: 1.5rem;
+        cursor: pointer;
+      }
     </style>
   </head>
   <body>
-    <div class="rating-container">
+    <div id="rating_box" class="rating rating-container">
       <h1>Rate Us!</h1>
-      <div class="stars">
-        <button data-value="1">&#9733;</button>
-        <button data-value="2">&#9733;</button>
-        <button data-value="3">&#9733;</button>
-        <button data-value="4">&#9733;</button>
+      <span onclick="closeButton()">
+        <i class="fa-solid fa-xmark"></i>
+      </span>
+      <div class="stars star_group">
         <button data-value="5">&#9733;</button>
+        <button data-value="4">&#9733;</button>
+        <button data-value="3">&#9733;</button>
+        <button data-value="2">&#9733;</button>
+        <button data-value="1">&#9733;</button>
       </div>
       <div class="rating-value">Rating: <span id="rating">0</span>/5</div>
-      <button class="submit-button">Submit</button>
+      <button class="submit-button" id="rating_subnit">Submit</button>
     </div>
 
     <script>
-      const stars = document.querySelectorAll(".stars button");
-      const ratingValue = document.getElementById("rating");
-      let selectedRating = 0;
+      // ! rating
+      try {
+        const stars = document.querySelectorAll(".stars button");
+        const ratingValue = document.getElementById("rating");
+        const ratingSubnit = document.getElementById("rating_subnit");
 
-      stars.forEach((star) => {
-        star.addEventListener("mouseover", () => {
-          resetStars();
-          highlightStars(star.dataset.value);
-        });
+        let selectedRating = 0;
 
-        star.addEventListener("click", () => {
-          selectedRating = star.dataset.value;
-          ratingValue.textContent = selectedRating;
-        });
-
-        star.addEventListener("mouseout", () => {
-          resetStars();
-          if (selectedRating) highlightStars(selectedRating);
-        });
-      });
-
-      function resetStars() {
         stars.forEach((star) => {
-          star.classList.remove("active");
-        });
-      }
+          star.addEventListener("mouseover", () => {
+            resetStars();
+            // highlightStars(star.dataset.value);
+          });
 
-      function highlightStars(value) {
-        stars.forEach((star) => {
-          if (star.dataset.value >= value) {
-            star.classList.add("active");
-          }
+          star.addEventListener("click", () => {
+            selectedRating = star.dataset.value;
+            ratingValue.textContent = selectedRating;
+            highlightStars(star.dataset.value);
+          });
+
+          star.addEventListener("mouseout", () => {
+            // resetStars();
+            if (selectedRating) highlightStars(selectedRating);
+          });
         });
+
+        function resetStars() {
+          stars.forEach((button) => {
+            button.classList.remove("active");
+          });
+        }
+
+        function highlightStars(value) {
+          stars.forEach((star) => {
+            if (star.dataset.value == value) {
+              star.classList.add("active");
+            }
+          });
+        }
+        ratingSubnit.addEventListener("click", () => {
+          closeButton();
+          localStorage.setItem("ratingData", "true");
+        });
+      } catch (error) {}
+
+      const closeButton = () => {
+        const rating_box = document.getElementById("rating_box");
+        if (rating_box.style.display == "none") {
+          rating_box.style.display = "flex";
+        } else {
+          rating_box.style.display = "none";
+        }
+      };
+
+      let ratingData = JSON.parse(localStorage.getItem("ratingData"));
+
+      if (!ratingData) {
+        const rating_box = document.getElementById("rating_box");
+        rating_box.style.display = "flex";
       }
     </script>
   </body>

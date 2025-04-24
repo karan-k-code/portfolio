@@ -175,7 +175,7 @@ let lastScrollTop = 0;
 
 const navbar = document.querySelector(".nav2");
 
-window.addEventListener("scroll", function () {
+window.addEventListener("scroll", function (x) {
   const scrollTop = window.scrollY || document.documentElement.scrollTop;
 
   if (scrollTop > lastScrollTop) {
@@ -222,3 +222,41 @@ document
       this.reset();
     }
   });
+
+// ! dark mode seting
+
+let darkseting = localStorage.getItem("dark_seting");
+const systemPrefersDark = window.matchMedia("(prefers-color-scheme: dark)");
+let dark;
+
+// dark, light, system default
+if (darkseting == "dark") {
+  dark = true;
+} else if (darkseting == "system") {
+  if (systemPrefersDark.matches == true) {
+    dark = true;
+  } else {
+    dark = false;
+  }
+} else if (darkseting == "light") {
+  dark = false;
+} else {
+  if (systemPrefersDark.matches == true) {
+    dark = true;
+  } else {
+    dark = false;
+  }
+}
+
+const root = document.documentElement;
+if (dark) {
+  root.style.setProperty("--card-bgc", "rgb(26, 26, 26)");
+  root.style.setProperty("--lite-text", "#d8d8d8");
+  root.style.setProperty("--bgc-color", "black");
+  root.style.setProperty("--color-text", "#ddd");
+} else {
+  root.style.setProperty("--card-bgc", "rgb(226, 226, 226)");
+  root.style.setProperty("--lite-text", "#333");
+  root.style.setProperty("--bgc-color", "#ffffff");
+  root.style.setProperty("--color-text", "black");
+}

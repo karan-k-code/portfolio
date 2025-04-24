@@ -1,3 +1,14 @@
+:root {
+  --card-bgc: rgb(26, 26, 26);
+  /* --card-bgc: rgb(40, 40, 40); */
+
+  --lite-text: #d8d8d8;
+  /* --lite-text: #333; */
+
+  --bgc-color: black;
+  --color-text: #ddd;
+}
+
 @import url("https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
 * {
@@ -6,17 +17,17 @@
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
 
+body {
+  flex-direction: column;
+  position: relative;
+  background-color: var(--bgc-color);
+  color: var(--color-text);
+}
+
 .dm-serif-text-regular {
   font-family: "DM Serif Text", serif;
   font-weight: 400;
   font-style: normal;
-}
-
-body {
-  flex-direction: column;
-  position: relative;
-  /* background-color: rgba(69, 70, 72, 0.813); */
-  /* color: #ffff; */
 }
 
 .line_l {
@@ -49,6 +60,7 @@ nav {
   animation: moveAndScale 1s ease-out;
   top: 0;
 }
+
 .anup {
   transition: all 0.3s ease;
   animation: navup 1s ease-out;
@@ -73,7 +85,7 @@ nav {
   margin-right: 10%;
   margin-top: 20px;
   margin-bottom: 20px;
-  color: #ffffff;
+  color: #ffffff; /*? dont change */
   font-weight: bolder;
   border-top: 1px solid rgba(48, 16, 231, 0.265);
   font-variant-caps: small-caps;
@@ -91,7 +103,7 @@ nav {
 .language {
   display: flex;
   position: relative;
-  /* background-color: #5a5454; */
+  background-color: var(--bgc-color);
   max-width: 250px;
   max-height: 250px;
   width: 32%;
@@ -99,7 +111,7 @@ nav {
   align-items: center;
   justify-content: center;
   border-radius: 2rem;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.679);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.679), 0 0 10px rgba(255, 255, 255, 0.732);
 }
 
 .language > span {
@@ -121,7 +133,7 @@ nav {
   justify-content: center;
   font-size: 1.7rem;
   font-weight: 600;
-  background-color: #ffffff;
+  background-color: var(--bgc-color);
   width: 80%;
   height: 80%;
   border-radius: 50%;
@@ -269,13 +281,14 @@ section {
 section h2 {
   text-align: center;
   margin-bottom: 1rem;
-  color: #333;
+  color: var(--lite-text);
 }
 
 section p {
   text-align: center;
   line-height: 1.6;
-  color: #555;
+  /* color: var(--dark-text); */
+  opacity: 0.8;
 }
 
 /* Footer Styles */
@@ -384,7 +397,6 @@ main {
   .title {
     opacity: 1;
   }
-  /* -webkit-box-reflect: below 3px linear-gradient(transparent, #ffffff91); */
 }
 
 .profile-card {
@@ -393,6 +405,7 @@ main {
   max-width: 400px;
   width: 40%;
   display: flex;
+  background-color: var(--card-bgc);
   flex-direction: column;
   align-items: center;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.459);
@@ -410,6 +423,8 @@ main {
 
 .bio {
   font-size: 1.2rem;
+  color: inherit;
+  opacity: 0.8;
 }
 
 /* projects */
@@ -424,11 +439,12 @@ main {
   gap: 5px;
   padding: 1rem;
   border-radius: 1rem;
-  background-color: rgba(243, 238, 238, 0.9);
+  background-color: var(--card-bgc);
+  /* opacity: 0.8; */
 }
 
 .desc > p {
-  color: #555;
+  opacity: 0.8;
   line-height: 1;
   text-align: start;
   margin-left: 1rem;
@@ -437,12 +453,14 @@ main {
 
 .desc > span {
   font-weight: 600;
-  color: #373838;
+  opacity: 0.9;
+  /* color: #373838; */
 }
 
 .desc > ul {
   margin-left: 2rem;
-  color: #3d3d3d;
+  opacity: 0.8;
+  /* color: #3d3d3d; */
 }
 
 #projects > p {
@@ -573,11 +591,13 @@ main {
   display: flex;
   font-size: 1.7rem;
   gap: 2rem;
-  color: #293435;
+  color: inherit;
   transition: all 0.3s ease;
+  opacity: 0.8;
 }
 .socal_media > a {
-  transition: all 0.3s ease;
+  color: inherit;
+  transition: all 0.1s ease-in-out;
 }
 
 .socal_media > a:hover {
@@ -588,10 +608,14 @@ main {
 #contactcontact > p {
   font-size: 1.5rem;
 }
+#contactcontact > p > a {
+  color: #007bff;
+  cursor: pointer;
+}
 .contact-form {
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 0px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0px 6px rgba(0, 0, 0, 0.1), 0 0 6px rgba(255, 255, 255, 0.1);
   width: 88%;
   max-width: 400px;
   transition: all 0.3s ease;
@@ -599,13 +623,14 @@ main {
 .contact-form h1 {
   font-size: 24px;
   margin-bottom: 20px;
-  color: #333;
+  opacity: 0.9;
 }
 .contact-form label {
   display: block;
   margin-bottom: 5px;
   font-weight: bold;
-  color: #555;
+  color: inherit;
+  opacity: 0.8;
 }
 .contact-form input,
 .contact-form textarea {
@@ -614,6 +639,9 @@ main {
   margin-bottom: 15px;
   border: 1px solid #ddd;
   border-radius: 4px;
+  background-color: inherit;
+  color: inherit;
+  opacity: 0.9;
 
   &:focus {
     outline: none;
@@ -657,12 +685,13 @@ main {
 .resum > a {
   display: flex;
   padding: 5px;
-  border: 1px solid rgba(0, 0, 0, 0.34);
+  border: 1px solid var(--color-text);
   font-size: 1.2rem;
   border-radius: 5px;
   transition: all 0.3s ease;
   &:hover {
-    background-color: #f0f0f0;
+    background-color: var(--card-bgc);
+    color: var(--color-text);
   }
 }
 
@@ -763,11 +792,11 @@ main {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   padding: 2rem;
   gap: 10px;
-  /* border-radius: 1rem; */
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  background-color: #b4b0b0d6;
+  background-color: var(--card-bgc);
+  border-radius: 1rem;
   max-width: 90%;
   width: 80%;
   max-height: 80vh;

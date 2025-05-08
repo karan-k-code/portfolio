@@ -5,6 +5,8 @@
   --lite-text: #d8d8d8;
   /* --lite-text: #333; */
 
+  --white-color: #fff;
+
   --bgc-color: black;
   --color-text: #ddd;
 }
@@ -22,12 +24,6 @@ body {
   position: relative;
   background-color: var(--bgc-color);
   color: var(--color-text);
-}
-
-.dm-serif-text-regular {
-  font-family: "DM Serif Text", serif;
-  font-weight: 400;
-  font-style: normal;
 }
 
 .line_l {
@@ -189,7 +185,7 @@ nav {
   align-items: center;
   /* padding: 1rem 2rem; */
   background-color: #333;
-  color: white;
+  color: var(--white-color);
 }
 
 .togle_button {
@@ -202,7 +198,7 @@ nav {
 
 .togle_button > span {
   display: block;
-  background-color: #fff;
+  background-color: var(--white-color);
   border-radius: 2px;
   width: 25px;
   height: 2px;
@@ -251,7 +247,7 @@ nav {
 }
 
 .navbar a {
-  color: white;
+  color: var(--white-color);
   text-decoration: none;
   margin: 0 1rem;
   transition: color 0.3s;
@@ -266,7 +262,11 @@ nav {
   margin-left: 1rem;
   margin: 1rem;
   font-size: 1.5rem;
-  font-weight: bold;
+  /* font-weight: bold; */
+  font-family: "Edu AU VIC WA NT Arrows", cursive;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
 }
 
 .menu {
@@ -294,7 +294,7 @@ section p {
 /* Footer Styles */
 footer {
   background-color: #333;
-  color: white;
+  color: var(--white-color);
   text-align: center;
   padding: 1rem 2rem;
   position: relative;
@@ -361,7 +361,7 @@ main {
   height: 15%;
   align-items: center;
   overflow: hidden;
-  color: white;
+  color: var(--white-color);
   text-shadow: 0 0 10px cyan, 0 0 20px cyan, 0 0 40px cyan, 0 0 80px cyan;
   opacity: 0;
 
@@ -649,7 +649,7 @@ main {
 }
 .contact-form button {
   background: #007bff;
-  color: white;
+  color: var(--white-color);
   border: none;
   padding: 10px;
   border-radius: 4px;
@@ -700,7 +700,7 @@ main {
 .rating-container {
   display: none;
   text-align: center;
-  background: #fff;
+  background: var(--white-color);
   padding: 20px;
   border-radius: 10px;
   width: 300px;
@@ -761,7 +761,7 @@ main {
   padding: 10px 20px;
   border: none;
   background-color: #007bff;
-  color: #fff;
+  color: var(--white-color);
   font-size: 1rem;
   border-radius: 5px;
   cursor: pointer;
@@ -850,7 +850,7 @@ main {
   }
   .image_mobile > span > img {
     width: fit-content;
-    display: none;
+    display: flex;
   }
   .project > .image > span:hover {
     width: unset;

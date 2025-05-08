@@ -865,6 +865,9 @@ main {
   .language > span > span {
     font-size: 0.8rem;
   }
+  footer .social-icons a > span {
+    display: none;
+  }
 }
 @media (max-width: 800px) {
 }

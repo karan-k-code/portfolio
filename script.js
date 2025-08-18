@@ -135,17 +135,16 @@ try {
 
 const closeButton = () => {
   const rating_box = document.getElementById("rating_box");
-  if (rating_box.style.display == "none") {
-    rating_box.style.display = "flex";
-  } else {
-    rating_box.style.display = "none";
-  }
+  rating_box.style.display = "none";
 };
 
 let ratingData = JSON.parse(localStorage.getItem("ratingData"));
 
-if (ratingData) {
-  closeButton();
+if (!ratingData) {
+  setTimeout(() => {
+    const rating_box = document.getElementById("rating_box");
+    rating_box.style.display = "flex";
+  }, 10000);
 }
 
 // ! close button

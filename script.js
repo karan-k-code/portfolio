@@ -148,7 +148,7 @@ const rattimeou = () => {
   setTimeout(() => {
     const rating_box = document.getElementById("rating_box");
     rating_box.style.display = "flex";
-  }, 5000);
+  }, 20000);
 };
 
 // ! close button

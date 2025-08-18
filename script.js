@@ -141,11 +141,15 @@ const closeButton = () => {
 let ratingData = JSON.parse(localStorage.getItem("ratingData"));
 
 if (!ratingData) {
+  rattimeou();
+}
+
+const rattimeou = () => {
   setTimeout(() => {
     const rating_box = document.getElementById("rating_box");
     rating_box.style.display = "flex";
-  }, 10000);
-}
+  }, 5000);
+};
 
 // ! close button
 const closeButton_img = () => {

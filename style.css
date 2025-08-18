@@ -390,10 +390,12 @@ main {
   flex-direction: column;
   gap: 2rem;
 }
+
 .projects > .project {
   display: flex;
   align-items: flex-start;
 }
+
 .project > .description {
   margin-left: 1rem;
   margin-right: 1rem;
@@ -405,6 +407,7 @@ main {
   display: flex;
   justify-content: center;
 }
+
 .project > .description > div {
   font-size: 1rem;
   text-align: left;
@@ -434,6 +437,7 @@ main {
   margin: 5px 0 0 0;
   gap: 20px;
 }
+
 .description > .buttons > a > button {
   padding: 7px 10px;
   border-radius: 7px;
@@ -484,6 +488,7 @@ main {
 .project > .image > span:hover {
   width: 100%;
 }
+
 .image_destop > span:hover {
   width: 100%;
 }
@@ -542,7 +547,7 @@ main {
   align-items: center;
   justify-content: center;
   border-radius: 2rem;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.679), 0 0 10px rgba(255, 255, 255, 0.732);
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.295), 0 0 4px rgba(255, 255, 255, 0.262);
 }
 
 .language > span {

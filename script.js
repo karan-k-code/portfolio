@@ -13,7 +13,7 @@ const showMore = () => {
   }
 };
 
-// ! togle button
+//  togle button
 const menu_click = () => {
   const toggleBtn = document.querySelector("#togle_button");
   const moreInfo = document.querySelector("#menu_togale");
@@ -45,7 +45,7 @@ const menu_click = () => {
   }
 };
 
-// ! show more funcation p
+//  show more funcation p
 
 const show_more_buttons = document.querySelectorAll(".show_more_button");
 
@@ -77,7 +77,7 @@ const des_show_more = () => {
   }
 };
 
-// ! smoth animation a tag
+//  smoth animation a tag
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   anchor.addEventListener("click", function (e) {
     e.preventDefault();
@@ -88,7 +88,7 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   });
 });
 
-// ! rating
+//  rating
 try {
   const stars = document.querySelectorAll(".stars button");
   const ratingValue = document.getElementById("rating");
@@ -151,7 +151,7 @@ const rattimeou = () => {
   }, 20000);
 };
 
-// ! close button
+//  close button
 const closeButton_img = () => {
   const x_img_box = document.getElementById("show_image_box");
   x_img_box.style.display = "none";
@@ -232,6 +232,8 @@ let darkseting = localStorage.getItem("dark_seting");
 const systemPrefersDark = window.matchMedia("(prefers-color-scheme: dark)");
 let dark;
 
+darkseting = "dark";
+
 // dark, light, system default
 if (darkseting == "dark") {
   dark = true;
@@ -255,11 +257,11 @@ const root = document.documentElement;
 if (dark) {
   root.style.setProperty("--card-bgc", "rgb(26, 26, 26)");
   root.style.setProperty("--lite-text", "#d8d8d8");
-  root.style.setProperty("--bgc-color", "black");
+  root.style.setProperty("--bgc-color", "rgba(12, 12, 12, 1)");
   root.style.setProperty("--color-text", "#ddd");
 } else {
-  root.style.setProperty("--card-bgc", "rgb(226, 226, 226)");
+  root.style.setProperty("--card-bgc", "rgba(235, 232, 232, 1)");
   root.style.setProperty("--lite-text", "#333");
-  root.style.setProperty("--bgc-color", "#ffffff");
+  root.style.setProperty("--bgc-color", "#d5d5d5ff");
   root.style.setProperty("--color-text", "black");
 }

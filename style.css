@@ -177,6 +177,7 @@ nav {
   font-optical-sizing: auto;
   /* font-weight: 700; */
   font-style: normal;
+  cursor: pointer;
 }
 
 .menu {
@@ -919,4 +920,55 @@ a {
   footer .social-icons a > span {
     display: none;
   }
+}
+
+/* project card styles */
+
+.project_card_div {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.project-card {
+  border-radius: 10px;
+  max-width: 350px;
+  width: 100%;
+  display: flex;
+  background-color: var(--card-bgc);
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.263);
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 10px 0 20px rgba(90, 156, 255, 0.503),
+      -10px 0 20px 10px rgba(255, 0, 0, 0.503),
+      0 10px 20px rgba(85, 244, 183, 0.5),
+      0 -10px 20px rgba(252, 58, 194, 0.503);
+  }
+}
+
+.p-img {
+  width: 100%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.459);
+}
+
+.project-card-title {
+  font-size: 1.3rem;
+  margin: 10px 0 0 0;
+  text-align: center;
+}
+
+.project-card-dec {
+  font-size: 0.9rem;
+  color: inherit;
+  opacity: 0.8;
+  text-align: center;
+  margin: 0.5rem 1rem 1rem 1rem;
 }

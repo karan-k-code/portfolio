@@ -273,19 +273,19 @@ if (dark) {
 const project_data = [
   {
     title: "E-commerce Website backend frontend and designe",
-    url: "https://github.com/username/portfolio-website",
+    url: "https://karan-k-code.github.io/kitmo/",
     img: "./image/cart_show.png",
     dec: "A modern e-commerce platform for kitmo brand, featuring a user-friendly UI, secure payment gateway, and real-time inventory management",
   },
   {
     title: "kOnshu socal_media app or website backend, frontend and designe",
-    url: "https://github.com/username/e-commerce-platform",
+    url: "https://konshu.xyz/",
     img: "./image/konshu.png",
     dec: "A modern socal_media platform for kOnshu brand, featuring auser-friendly UI, user post data and real-time Chatting",
   },
   {
     title: "k Code Blog Application",
-    url: "https://github.com/username/blog-application",
+    url: "https://kcode.konshu.in/",
     img: "./image/k_code.png",
     dec: "A blogging platform with user authentication, post creation, and commenting features using Django and React.",
   },
@@ -295,7 +295,7 @@ const project_gen = () => {
   const project_section = document.getElementById("project_section");
   project_section.innerHTML += project_data
     .map((project) => {
-      return `<div class="project-card">
+      return `<div class="project-card" onclick="clickproject('${project.url}')">
             <img class="p-img" src="${project.img}" />
             <h3 class="project-card-title">
               ${project.title}
@@ -306,6 +306,10 @@ const project_gen = () => {
           </div>`;
     })
     .join("");
+};
+
+const clickproject = (url) => {
+  window.open(url, "_blank");
 };
 
 project_gen();

@@ -243,9 +243,9 @@ main {
   align-items: center;
   overflow: hidden;
   color: var(--white-color);
+  text-wrap: none;
   text-shadow: 0 0 10px cyan, 0 0 20px cyan, 0 0 40px cyan, 0 0 80px cyan;
   opacity: 0;
-
   transition: all 0.3s ease;
 }
 
@@ -339,7 +339,6 @@ main {
   border: 1px solid;
   border-image: linear-gradient(to right, #0066ff, #ff32d6) 1;
   font-size: 1rem;
-  border-radius: 6px; /* Todo: fix border readux errro */
   transition: all 0.3s ease;
   &:hover {
     background-color: var(--card-bgc);

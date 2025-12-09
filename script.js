@@ -314,4 +314,18 @@ const clickproject = (url) => {
 
 project_gen();
 
-const homebtn = () => (document.window.href = "index.html");
+const homebtn = () => {
+  document.location.href = "#";
+
+  // scrollIntoView({
+  //   behavior: "smooth",
+  // });
+
+  // document.scrollIntoView({
+  //   behavior: "smooth",
+  // });
+
+  document.querySelector(this.getAttribute("href")).scrollIntoView({
+    behavior: "smooth",
+  });
+};

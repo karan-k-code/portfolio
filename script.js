@@ -218,6 +218,8 @@ document
       console.log(error);
     });
 
+    console.log(response);
+
     if (response.ok) {
       const responseMessage = document.getElementById("responseMessage");
       responseMessage.textContent =
@@ -265,3 +267,65 @@ if (dark) {
   root.style.setProperty("--bgc-color", "#d5d5d5ff");
   root.style.setProperty("--color-text", "black");
 }
+
+// project data
+
+const project_data = [
+  {
+    title: "E-commerce Website backend frontend and designe",
+    url: "https://karan-k-code.github.io/kitmo/",
+    img: "./image/cart_show.png",
+    dec: "A modern e-commerce platform for kitmo brand, featuring a user-friendly UI, secure payment gateway, and real-time inventory management",
+  },
+  {
+    title: "kOnshu socal_media app or website backend, frontend and designe",
+    url: "https://konshu.xyz/",
+    img: "./image/konshu.png",
+    dec: "A modern socal_media platform for kOnshu brand, featuring auser-friendly UI, user post data and real-time Chatting",
+  },
+  {
+    title: "k Code Blog Application",
+    url: "https://kcode.konshu.in/",
+    img: "./image/k_code.png",
+    dec: "A blogging platform with user authentication, post creation, and commenting features using Django and React.",
+  },
+];
+
+const project_gen = () => {
+  const project_section = document.getElementById("project_section");
+  project_section.innerHTML += project_data
+    .map((project) => {
+      return `<div class="project-card" onclick="clickproject('${project.url}')">
+            <img class="p-img" src="${project.img}" />
+            <h3 class="project-card-title">
+              ${project.title}
+            </h3>
+            <p class="project-card-dec">
+              ${project.dec}
+            </p>
+          </div>`;
+    })
+    .join("");
+};
+
+const clickproject = (url) => {
+  window.open(url, "_blank");
+};
+
+project_gen();
+
+const homebtn = () => {
+  document.location.href = "#";
+
+  // scrollIntoView({
+  //   behavior: "smooth",
+  // });
+
+  // document.scrollIntoView({
+  //   behavior: "smooth",
+  // });
+
+  document.querySelector(this.getAttribute("href")).scrollIntoView({
+    behavior: "smooth",
+  });
+};

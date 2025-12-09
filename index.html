@@ -28,7 +28,7 @@
   <body class="light">
     <!-- Navbar -->
     <nav class="navbar nav1">
-      <div class="logo">karan_k_code</div>
+      <div class="logo" onclick="homebtn()">karan_k_code</div>
       <div class="menu">
         <a href="#about">About</a>
         <a href="#projects">Projects</a>
@@ -55,7 +55,7 @@
     </nav>
 
     <nav class="navbar nav2">
-      <div class="logo">karan_k_code</div>
+      <div class="logo" onclick="homebtn()">karan_k_code</div>
       <div class="menu">
         <a href="#about">About</a>
         <a href="#projects">Projects</a>
@@ -87,29 +87,30 @@
         <!-- left side image -->
         <div class="image_b">
           <span>
-            <span class="title title_a">Coding</span>
-            <span class="image_s img_a">
-              <img
-                src="./image/pexels-djordje-petrovic-590080-2102416.jpg"
-                alt="Profile Picture"
-              />
-            </span>
-          </span>
-          <span>
+            <span class="title title_a">New Ideas</span>
             <span class="image_s img_b">
               <img
-                src="./image/pexels-flodahm-699459.jpg"
+                src="./image/pexels-nguyendesigner-236397.jpg"
                 alt="Profile Picture"
               />
             </span>
-            <span class="title title_b">Designing</span>
           </span>
 
           <span>
-            <span class="title title_c">Faster</span>
+            <span class="image_s img_b">
+              <img
+                src="./image/pexels-shkrabaanthony-5816283.jpg"
+                alt="Profile Picture"
+              />
+            </span>
+            <span class="title title_b">Planning</span>
+          </span>
+
+          <span>
+            <span class="title title_c">Team work</span>
             <span class="image_s img_c">
               <img
-                src="./image/pexels-fauxels-3183165.jpg"
+                src="./image/pexels-fauxels-3184423.jpg"
                 alt="Profile Picture"
               />
             </span>
@@ -126,29 +127,31 @@
         <!-- right side image -->
         <div class="image_b">
           <span>
-            <span class="title title_a">Planning</span>
+            <span class="title title_a">Designing</span>
             <span class="image_s img_a">
               <img
-                src="./image/pexels-shkrabaanthony-5816283.jpg"
+                src="./image/pexels-flodahm-699459.jpg"
                 alt="Profile Picture"
               />
             </span>
-          </span>
-          <span>
-            <span class="image_s img_b">
-              <img
-                src="./image/pexels-nguyendesigner-236397.jpg"
-                alt="Profile Picture"
-              />
-            </span>
-            <span class="title title_b">New Ideas</span>
           </span>
 
           <span>
-            <span class="title title_c">Team work</span>
+            <span class="image_s img_b">
+              <img
+                src="./image/pexels-djordje-petrovic-590080-2102416.jpg"
+                alt="Profile Picture"
+              />
+            </span>
+            <span class="title title_b">Coding</span>
+          </span>
+
+          <span>
+            <span class="title title_a">Deliver</span>
+
             <span class="image_s img_c">
               <img
-                src="./image/pexels-fauxels-3184423.jpg"
+                src="./image/pexels-fauxels-3183165.jpg"
                 alt="Profile Picture"
               />
             </span>
@@ -164,7 +167,7 @@
           development, I strive to create impactful and meaningful work.
         </p>
         <div class="resum">
-          <a href="./image/resum_karan.pdf" download="resum_karan.pdf"
+          <a href="./image/resum_karan_2025.pdf" download="resum_karan_2025.pdf"
             >DOWNLOAD RESUM</a
           >
         </div>
@@ -206,18 +209,13 @@
         <span></span>
       </div>
       <section id="projects">
-        <h2>Projects</h2>
+        <h2>Latest Projects</h2>
         <p>
           Here are some of the projects I have worked on. Each one showcases my
           skills and dedication to solving problems creatively.
         </p>
 
-        <div class="project_card_div">
-          <div class="project_card">
-            <img class="p-img" src="./image/cart_show.png" />
-            <span>E-commerce Website backend frontend and designe</span>
-          </div>
-        </div>
+        <div class="project_card_div" id="project_section"></div>
 
         <div class="projects" style="display: none">
           <div class="project">
@@ -400,7 +398,7 @@
         <span></span>
       </div>
       <section id="skills">
-        <h2>Skills</h2>
+        <h2>Top Skills</h2>
         <p>
           Throughout my career, I have developed expertise in Frontend, Backend,
           and Database. I'm always eager to learn and grow.

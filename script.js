@@ -315,8 +315,8 @@ const clickproject = (url) => {
 project_gen();
 
 const homebtn = () => {
-  window.scrollTo({
-    top: 0,
+  document.location.href = "#";
+  document.querySelector(this.getAttribute("href")).scrollIntoView({
     behavior: "smooth",
   });
 };

@@ -316,15 +316,6 @@ project_gen();
 
 const homebtn = () => {
   document.location.href = "#";
-
-  // scrollIntoView({
-  //   behavior: "smooth",
-  // });
-
-  // document.scrollIntoView({
-  //   behavior: "smooth",
-  // });
-
   document.querySelector(this.getAttribute("href")).scrollIntoView({
     behavior: "smooth",
   });

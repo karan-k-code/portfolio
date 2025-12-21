@@ -138,18 +138,18 @@ const closeButton = () => {
   rating_box.style.display = "none";
 };
 
-let ratingData = JSON.parse(localStorage.getItem("ratingData"));
-
-if (!ratingData) {
-  rattimeou();
-}
-
 const rattimeou = () => {
   setTimeout(() => {
     const rating_box = document.getElementById("rating_box");
     rating_box.style.display = "flex";
   }, 20000);
 };
+
+let ratingData = JSON.parse(localStorage.getItem("ratingData"));
+
+if (!ratingData) {
+  rattimeou();
+}
 
 //  close button
 const closeButton_img = () => {

@@ -148,7 +148,7 @@ const rattimeou = () => {
 let ratingData = JSON.parse(localStorage.getItem("ratingData"));
 
 if (!ratingData) {
-  rattimeou();
+  // rattimeou();
 }
 
 //  close button

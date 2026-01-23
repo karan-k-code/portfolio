@@ -4,10 +4,10 @@
 This repository contains the source code for the personal portfolio website of Karan Kumar. It showcases his web development projects, skills, and provides ways to connect with him.
 
 ## 🚀 About Me  
-🌐 Web Developer | 💻 MongoDB & Node.js Enthusiast | ⚡ Passionate about building chat applications  
+🌐 Web Developer | 💻 MongoDB & Node.js Enthusiast | ⚡ A passion for creating new things  
 
 ## 🛠 Tech Stack  
-- **Frontend:** HTML, CSS, JavaScript  
+- **Frontend:** HTML, CSS, JavaScript
 - **Backend:** Node.js, Express.js  
 - **Database:** MongoDB  
 - **Tools:** Git, GitHub, Google Sheets API  
@@ -28,14 +28,8 @@ To explore the portfolio website:
 4.  Links to live demos and GitHub repositories (where available) are provided for each project.
 5.  The website is responsive and should adapt to different screen sizes.
 
-## 📸 Screenshots
-Here are a few glimpses of the portfolio website:
-![Full page view of the portfolio](./image/Screenshot%202025-02-03%20185655.png)
-![Project showcase example](./image/product_show.png)
-![Chat application project example](./image/d_chat.png)
-
 ## 🔗 Connect With Me  
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/karan-kumar-306a27273/)  
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/karan-k-code/)  
 [![Portfolio](https://img.shields.io/badge/Portfolio-000?style=for-the-badge&logo=vercel&logoColor=white)](https://karan-k-code.github.io/portfolio/)  
 
 ## 📊 GitHub Stats  

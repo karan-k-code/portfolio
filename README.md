@@ -1,37 +1,50 @@
-# 👋 Hi, I'm Karan  
+# Karan Kumar — Personal portfolio
 
-## Personal Portfolio Website
-This repository contains the source code for the personal portfolio website of Karan Kumar. It showcases his web development projects, skills, and provides ways to connect with him.
+A clean, responsive personal website that showcases projects, skills, and ways to connect. Built with plain HTML, CSS and JavaScript so it’s easy to fork, customize, and host.
 
-## 🚀 About Me  
-🌐 Web Developer | 💻 MongoDB & Node.js Enthusiast | ⚡ A passion for creating new things  
+Live demo: https://karan-k-code.github.io/portfolio/
 
-## 🛠 Tech Stack  
-- **Frontend:** HTML, CSS, JavaScript
-- **Backend:** Node.js, Express.js  
-- **Database:** MongoDB  
-- **Tools:** Git, GitHub, Google Sheets API  
+---
 
-## ✨ Features
-- About Me section introducing Karan Kumar.
-- Projects showcase: Displays various web development projects with detailed descriptions, technologies used, and links to GitHub repositories or live demos.
-- Skills section: Highlights proficiency in frontend (HTML, CSS, JavaScript) and backend (Node.js, MongoDB) technologies.
-- Resume Download: Allows users to download Karan's resume.
-- Contact Information: Provides a contact form and links to social media profiles (LinkedIn, GitHub, etc.).
-- Responsive Design: The website is designed to be accessible and user-friendly across various devices and screen sizes.
+## Quick start
 
-## 🚀 Getting Started
-To explore the portfolio website:
-1.  Simply open the `index.html` file in a modern web browser.
-2.  Use the navigation bar at the top to jump to different sections like 'About', 'Projects', 'Skills', and 'Contact'.
-3.  In the 'Projects' section, you can click on '..Show more' to see more details about each project.
-4.  Links to live demos and GitHub repositories (where available) are provided for each project.
-5.  The website is responsive and should adapt to different screen sizes.
+- Open the site: double-click index.html or serve it locally:
+  - Python: `python -m http.server 8000`
+  - Node: `npx http-server -p 8000`
+- Visit http://localhost:8000 in your browser.
 
-## 🔗 Connect With Me  
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/karan-k-code/)  
-[![Portfolio](https://img.shields.io/badge/Portfolio-000?style=for-the-badge&logo=vercel&logoColor=white)](https://karan-k-code.github.io/portfolio/)  
+## What’s inside
 
-## 📊 GitHub Stats  
-![GitHub Streak](https://streak-stats.demolab.com/?user=karan-k-code&theme=dark)  
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=karan-k-code&layout=compact&theme=dark)  
+- index.html — single-page portfolio
+- style.css — layout and responsive styles
+- script.js — interactive behavior
+- image/ — project and profile images
+
+## Tech stack
+- HTML, CSS, JavaScript
+- (Optional) Node.js + Express for a backend contact form
+- MongoDB for data storage (if backend is used)
+
+## Key features
+- Responsive, mobile-first design
+- Projects section with links to demos & repos
+- Skills and resume download
+- Contact section (static form or hook up a backend)
+
+## How to customize
+1. Replace text and images in `index.html`.
+2. Update styles in `style.css`.
+3. Add projects by editing the Projects section in `index.html`.
+
+## Contributing
+Small fixes and improvements welcome. Open an issue or submit a pull request with a clear description of the change.
+
+## License
+MIT — see LICENSE (or add one) for details.
+
+## Contact
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/karan-k-code/)  [GitHub Pages demo](https://karan-k-code.github.io/portfolio/)
+
+---
+
+Made with ❤️ — Karan Kumar

@@ -296,7 +296,7 @@ const project_gen = () => {
   project_section.innerHTML += project_data
     .map((project) => {
       return `<div class="project-card" onclick="clickproject('${project.url}')">
-            <img class="p-img" src="${project.img}" />
+            <img class="p-img" src="${project.img}" alt="${project.title}" />
             <h3 class="project-card-title">
               ${project.title}
             </h3>

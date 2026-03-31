@@ -90,7 +90,7 @@ const project_data = [
   {
     title: "Plant Shop",
     url: "https://plant.konshu.in/",
-    img: "./image/k_code.png",
+    img: "./image/plant.konshu.in.png",
     dec: "Modern plant shop platform with markdown support and user authentication.",
     tech: ["React", "node.js", "MongoDB"],
   },

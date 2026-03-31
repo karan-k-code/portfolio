@@ -27,37 +27,14 @@
       content="https://karan.konshu.in/image/karan_a.jpg"
     />
 
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://karan.konshu.in/" />
-    <meta
-      property="twitter:title"
-      content="Karan Kumar | Web Developer Portfolio"
-    />
-    <meta
-      property="twitter:description"
-      content="Karan Kumar is a passionate Web Developer from India specializing in HTML, CSS, JavaScript, Node.js, and MongoDB. Explore his latest projects and skills."
-    />
-    <meta
-      property="twitter:image"
-      content="https://karan.konshu.in/image/karan_a.jpg"
-    />
-
-    <!-- Canonical Link -->
-    <link rel="canonical" href="https://karan.konshu.in/" />
-
-    <title>Karan Kumar | Web Developer Portfolio</title>
+    <title>Karan Kumar | Modern Web Developer Portfolio</title>
     <!-- k icon -->
-    <link rel="icon" href="../k-log-tr-v1.png" type="image/x-icon" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="icon" href="k-log-tr-v1.png" type="image/x-icon" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Fredericka+the+Great&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
 
@@ -65,39 +42,11 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
-    <!-- <link rel="stylesheet" href="../Components/darkmode/dark.css" /> -->
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body class="light">
+  <body class="dark">
     <!-- Navbar -->
-    <nav class="navbar nav1">
-      <div class="logo" onclick="homebtn()">karan_k_code</div>
-      <div class="menu">
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="#contactcontact">Contact</a>
-      </div>
-
-      <!-- menu button -->
-      <div class="togle_button" id="togle_button" onclick="menu_click()">
-        <span id="line_a" class="line_a1"></span>
-        <span id="line_b" class="line_b1"></span>
-        <span id="line_c" class="line_c1"></span>
-      </div>
-
-      <!-- menu toggle  -->
-      <div class="menu_togale" id="menu_togale">
-        <ul>
-          <li onclick="menu_click()"><a href="#about">About</a></li>
-          <li onclick="menu_click()"><a href="#projects">Projects</a></li>
-          <li onclick="menu_click()"><a href="#skills">Skills</a></li>
-          <li onclick="menu_click()"><a href="#contactcontact">Contact</a></li>
-        </ul>
-      </div>
-    </nav>
-
-    <nav class="navbar nav2">
+    <nav class="nav2" id="mainNav">
       <div class="logo" onclick="homebtn()">karan_k_code</div>
       <div class="menu">
         <a href="#about">About</a>
@@ -125,477 +74,151 @@
     </nav>
 
     <main>
-      <!-- profile secation -->
+      <!-- Hero Section -->
       <section class="profile_images_k">
-        <!-- left side image -->
-        <div class="image_b">
-          <span>
-            <span class="title title_a">New Ideas</span>
-            <span class="image_s img_b">
-              <img
-                src="./image/pexels-nguyendesigner-236397.jpg"
-                alt="Innovative web design ideas"
-              />
-            </span>
-          </span>
-
-          <span>
-            <span class="image_s img_b">
-              <img
-                src="./image/pexels-shkrabaanthony-5816283.jpg"
-                alt="Strategic project planning"
-              />
-            </span>
-            <span class="title title_b">Planning</span>
-          </span>
-
-          <span>
-            <span class="title title_c">Team work</span>
-            <span class="image_s img_c">
-              <img
-                src="./image/pexels-fauxels-3184423.jpg"
-                alt="Web development team collaboration"
-              />
-            </span>
-          </span>
-        </div>
-        <!-- profile image -->
-        <div class="profile-card">
-          <img src="./image/karan_a.jpg" alt="Karan Kumar - Web Developer" />
-          <h1 class="name">Karan kumar</h1>
-          <p class="bio">
-            Web Developer from india. Passionate about coding and coffee.
+        <div class="hero-content reveal">
+          <h1>
+            Building Digital <br /><span style="color: var(--accent-primary)"
+              >Experiences</span
+            >
+          </h1>
+          <p>
+            I'm a Full-Stack Developer specializing in building exceptional
+            digital products that combine clean code with modern design.
           </p>
+          <div class="resum">
+            <a href="#projects">Explore My Work</a>
+          </div>
         </div>
-        <!-- right side image -->
-        <div class="image_b">
-          <span>
-            <span class="title title_a">Designing</span>
-            <span class="image_s img_a">
-              <img
-                src="./image/pexels-flodahm-699459.jpg"
-                alt="Modern UI/UX design"
-              />
-            </span>
-          </span>
 
-          <span>
-            <span class="image_s img_b">
-              <img
-                src="./image/pexels-djordje-petrovic-590080-2102416.jpg"
-                alt="Writing clean and efficient code"
-              />
-            </span>
-            <span class="title title_b">Coding</span>
-          </span>
-
-          <span>
-            <span class="title title_a">Deliver</span>
-
-            <span class="image_s img_c">
-              <img
-                src="./image/pexels-fauxels-3183165.jpg"
-                alt="Delivering high-quality web applications"
-              />
-            </span>
-          </span>
+        <div class="profile-card reveal">
+          <img src="./image/karan_n.jpg" alt="Karan Kumar - Web Developer" />
         </div>
       </section>
 
       <!-- About Section -->
-      <section id="about">
-        <h2>About Me</h2>
-        <p>
-          Hello! I'm karan, a coder passionate about coding. With a focus on web
-          development, I strive to create impactful and meaningful work.
-        </p>
-        <div class="resum">
-          <a href="./image/resum_karan_2025.pdf" download="resum_karan_2025.pdf"
-            >DOWNLOAD RESUM</a
-          >
+      <section id="about" class="reveal">
+        <div class="about-text">
+          <h2>About Me</h2>
+          <p>
+            Hello! I'm Karan, a developer based in India with a deep passion for
+            coding and problem-solving. I focus on creating high-performance web
+            applications that provide meaningful user experiences.
+          </p>
+          <div class="resum">
+            <a
+              href="./image/resum_karan_2025.pdf"
+              download="resum_karan_2025.pdf"
+              >DOWNLOAD RESUME</a
+            >
+          </div>
+          <div class="socal_media">
+            <a href="https://github.com/karan-k-code" target="_blank"
+              ><i class="fa-brands fa-github"></i
+            ></a>
+            <a href="https://linkedin.com/in/karan-k-code" target="_blank"
+              ><i class="fa-brands fa-linkedin"></i
+            ></a>
+            <a href="https://x.com/karan_k_code" target="_blank"
+              ><i class="fa-brands fa-twitter"></i
+            ></a>
+            <a href="https://instagram.com/karan_k_code/" target="_blank"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+          </div>
         </div>
-        <div class="socal_media">
-          <a
-            href="https://www.facebook.com/share/g6CULxzUt6DLVopG/?mibextid=qi2Omg"
-            target="_blank"
-          >
-            <i class="fa-brands fa-facebook"></i>
-          </a>
-
-          <!-- ! Instagram M -->
-
-          <a href="https://www.instagram.com/karan_k_code/" target="_blank">
-            <i class="fa-brands fa-instagram"></i>
-          </a>
-
-          <!-- ! Lindedin M -->
-
-          <a href="https://www.linkedin.com/in/karan-k-code" target="_blank">
-            <i class="fa-brands fa-linkedin"></i>
-          </a>
-
-          <!-- ! twitter M-->
-
-          <a href="https://x.com/karan_k_code" target="_blank">
-            <i class="fa-brands fa-twitter"></i>
-          </a>
-
-          <!-- ! Github M-->
-
-          <a href="https://github.com/karan-k-code" target="_blank">
-            <i class="fa-brands fa-github"></i>
-          </a>
+        <div class="about-stats reveal">
+          <!-- Optional: Add a graphic or stats here -->
         </div>
       </section>
 
       <!-- Projects Section -->
-      <div class="line_l">
-        <span></span>
-      </div>
-
-      <section id="projects">
+      <section id="projects" class="reveal">
         <h2>Latest Projects</h2>
-        <p>
-          Here are some of the projects I have worked on. Each one showcases my
-          skills and dedication to solving problems creatively.
-        </p>
-
-        <div class="project_card_div" id="project_section"></div>
-
-        <!-- <div class="projects" style="display: none">
-          <div class="project">
-            <div class="image">
-              <span class="t_img">
-                <img src="./image/product_show.png" alt="Project Image" />
-              </span>
-              <span class="t_img">
-                <img src="./image/order_show.png" alt="Project Image" />
-              </span>
-              <span class="t_img">
-                <img src="./image/cart_show.png" alt="Project Image" />
-              </span>
-            </div>
-            <div class="description">
-              <h3>E-commerce Website backend frontend and designe</h3>
-              <div class="description_p" id="dec">
-                <div class="desc">
-                  <span>Description :</span>
-                  <p>
-                    A modern e-commerce platform for kitmo brand, featuring a
-                    user-friendly UI, secure payment gateway, and real-time
-                    inventory management
-                  </p>
-                  <span>Technologies Used :</span>
-                  <ul>
-                    <li>Frontend: (HTML, CSS, JavaScript)</li>
-                    <li>Backend: (Node.js, Express)</li>
-                    <li>Database: (MongoDB)</li>
-                    <li>Other: (Stripe API)</li>
-                  </ul>
-                  <span>Features :</span>
-                  <ul>
-                    <li>User authentication & authorization</li>
-                    <li>Responsive design</li>
-                    <li>API integrations</li>
-                    <li>Admin dashboard</li>
-                    <li>Performance optimization</li>
-                  </ul>
-                </div>
-              </div>
-              <span id="show_more_text" class="show_more_button"
-                >..Show more</span
-              >
-              <div class="buttons">
-                <a href="https://github.com/karan-k-code/kitmo" target="_blank"
-                  ><button class="github-button">
-                    View on <i class="fa-brands fa-github"></i> GitHub
-                  </button></a
-                >
-                <a href="https://karan-k-code.github.io/kitmo/" target="_blank"
-                  ><button class="live-button">Live Demo</button></a
-                >
-              </div>
-            </div>
-          </div>
-          <div class="project">
-            <div class="image_mobile">
-              <span class="t_img">
-                <img src="./image/d_h.png" alt="Project Image" />
-              </span>
-              <span class="t_img">
-                <img src="./image/d_u_a.png" alt="Project Image" />
-              </span>
-              <span class="t_img">
-                <img src="./image/d_chat.png" alt="Project Image" />
-              </span>
-            </div>
-            <div class="description">
-              <h3>
-                kOnshu socal_media app or website backend, frontend and designe
-              </h3>
-              <div class="description_p" id="dec">
-                <div class="desc">
-                  <span>Description :</span>
-                  <p>
-                    A modern socal_media platform for kOnshu brand, featuring a
-                    user-friendly UI, user post data and real-time Chatting
-                  </p>
-                  <span>Technologies Used :</span>
-                  <ul>
-                    <li>Frontend: (HTML, CSS, JavaScript)</li>
-                    <li>Backend: (Node.js, Express)</li>
-                    <li>Database: (MongoDB)</li>
-                    <li>Other: (Stripe API)</li>
-                  </ul>
-                  <span>Features :</span>
-                  <ul>
-                    <li>User authentication & authorization</li>
-                    <li>Responsive design</li>
-                    <li>API integrations</li>
-                    <li>Admin dashboard</li>
-                    <li>Performance optimization</li>
-                  </ul>
-                </div>
-              </div>
-              <span id="show_more_text" class="show_more_button"
-                >..Show more</span
-              >
-              <div class="buttons">
-                 <a href="#"
-                  ><button class="github-button">
-                    View on <i class="fa-brands fa-github"></i> GitHub
-                  </button></a
-                > 
-                <a href="https://www.konshu.xyz" target="_blank"
-                  ><button class="live-button">Live Demo</button></a
-                >
-              </div>
-            </div>
-            <div class="image_destop">
-              <span class="t_img">
-                <img src="./image/d_h.png" alt="Project Image" />
-              </span>
-              <span class="t_img">
-                <img src="./image/d_u_a.png" alt="Project Image" />
-              </span>
-              <span class="t_img">
-                <img src="./image/d_chat.png" alt="Project Image" />
-              </span>
-            </div>
-          </div>
-          <div class="project">
-            <div class="image">
-              <span class="t_img">
-                <img src="./image/chait_u.png" alt="Project Image" />
-              </span>
-              <span class="t_img">
-                <img src="./image/chait_h.png" alt="Project Image" />
-              </span>
-              <span class="t_img">
-                <img src="./image/chait_menu.png" alt="Project Image" />
-              </span>
-            </div>
-            <div class="description">
-              <h3>Chatting application backend and frontend and designe</h3>
-              <div class="description_p" id="dec">
-                <div class="desc">
-                  <span>Description :</span>
-                  <p>
-                    A modern chaiting website for XYZ brand, featuring a
-                    user-friendly UI
-                  </p>
-                  <span>Technologies Used :</span>
-                  <ul>
-                    <li>Frontend: (HTML, CSS, JavaScript)</li>
-                    <li>Backend: (Node.js, Express)</li>
-                    <li>Database: (MongoDB)</li>
-                    <li>Other: (Stripe API)</li>
-                  </ul>
-                  <span>Features :</span>
-                  <ul>
-                    <li>User authentication & authorization</li>
-                    <li>Responsive design</li>
-                    <li>API integrations</li>
-                    <li>Admin dashboard</li>
-                    <li>
-                      Performance optimization
-                      <span style="color: blue">..Show more</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <span id="show_more_text" class="show_more_button"
-                >..Show more</span
-              >
-              <div class="buttons">
-                 <a href=""
-                  ><button class="github-button">View on GitHub</button></a
-                >
-                <a href=""><button class="live-button">Live Demo</button></a>
-              </div>
-            </div>
-          </div>
-        </div> -->
+        <div class="project_card_div" id="project_section">
+          <!-- Dynamically populated by JS -->
+        </div>
       </section>
 
       <!-- Skills Section -->
-      <div class="line_l">
-        <span></span>
-      </div>
-
-      <section id="skills">
-        <h2>Top Skills</h2>
-        <p>
-          Throughout my career, I have developed expertise in Frontend, Backend,
-          and Database. I'm always eager to learn and grow.
-        </p>
-        <div class="line-sdf"></div>
-        <h3>Frontend</h3>
-
-        <div class="Programming_language">
-          <div class="language">
-            <span class="data_html">
-              <span>
-                <p>HTML</p>
-                <p>80%</p>
-              </span>
-            </span>
+      <section id="skills" class="reveal">
+        <h2>Technical Skills</h2>
+        <div class="skills-grid">
+          <div class="skill-item">
+            <i class="fa-brands fa-html5"></i>
+            <h3>Frontend</h3>
+            <p>HTML5, CSS3, JavaScript (ES6+), React</p>
           </div>
-          <div class="language">
-            <span class="data_css">
-              <span>
-                <p>CSS</p>
-                <p>70%</p>
-              </span>
-            </span>
+          <div class="skill-item">
+            <i class="fa-brands fa-node-js"></i>
+            <h3>Backend</h3>
+            <p>Node.js, Express, RESTful APIs</p>
           </div>
-          <div class="language">
-            <span class="data_javascript">
-              <span>
-                <p>JAVASCRIPT</p>
-                <p>75%</p>
-              </span>
-            </span>
+          <div class="skill-item">
+            <i class="fa-solid fa-database"></i>
+            <h3>Database</h3>
+            <p>MongoDB, Mongoose, PostgreSQL</p>
           </div>
-        </div>
-        <div class="line-sdf"></div>
-        <h3>Backend</h3>
-        <div class="Programming_language">
-          <div class="language">
-            <span class="data_nodejs">
-              <span>
-                <p>NODE.JS</p>
-                <p>60%</p>
-              </span>
-            </span>
-          </div>
-        </div>
-        <div class="line-sdf"></div>
-        <h3>Database</h3>
-        <div class="Programming_language">
-          <div class="language">
-            <span class="data_mongodb">
-              <span>
-                <p>Mongodb</p>
-                <p>70%</p>
-              </span>
-            </span>
+          <div class="skill-item">
+            <i class="fa-solid fa-layer-group"></i>
+            <h3>Others</h3>
+            <p>Git, Docker, AWS, UI/UX Design</p>
           </div>
         </div>
       </section>
 
       <!-- Contact Section -->
-      <div class="line_l">
-        <span></span>
-      </div>
-
-      <section id="contactcontact">
-        <h2>Contact</h2>
-
-        <p>
-          If you'd like to get in touch, feel free to reach out at
-          <a href="mailto:kitmoindia@gmail.com">kitmoindia@gmail.com</a>.
-        </p>
+      <section id="contactcontact" class="reveal">
+        <h2>Get In Touch</h2>
         <div class="contact-form">
-          <h1>Contact Us</h1>
-          <form class="form_con" id="contactForm" name="contactus">
-            <label for="name">Name</label>
+          <form class="form_con" id="contactForm">
             <input
               type="text"
               id="name"
               name="name"
-              placeholder="Your name"
+              placeholder="Your Name"
               required
             />
-
-            <label for="email">Email</label>
             <input
               type="email"
               id="email"
               name="email"
-              placeholder="Your email"
+              placeholder="Your Email"
               required
             />
-
-            <label for="message">Message</label>
             <textarea
               id="message"
               name="message"
               rows="5"
-              placeholder="Your message"
+              placeholder="Your Message"
               required
             ></textarea>
-
-            <button type="submit">Submit</button>
+            <button type="submit">Send Message</button>
           </form>
-          <p id="responseMessage" style="margin-top: 10px; color: green"></p>
+          <p
+            id="responseMessage"
+            style="margin-top: 10px; color: var(--accent-primary)"
+          ></p>
         </div>
       </section>
     </main>
 
-    <!--  show image box  -->
-    <div class="show_image_box" id="show_image_box">
-      <img src="image/cart_show.png" />
-      <span class="closeButton_img" onclick="closeButton_img()">
-        <i class="fa-solid fa-xmark"></i>
-      </span>
-    </div>
-
-    <!-- rating -->
-    <div id="rating_box" class="rating-container rating" style="display: none">
-      <h1>Rate Us!</h1>
-      <span onclick="(closeButton(), rattimeou())">
-        <i class="fa-solid fa-xmark"></i>
-      </span>
-      <div class="stars star_group">
-        <button data-value="5">&#9733;</button>
-        <button data-value="4">&#9733;</button>
-        <button data-value="3">&#9733;</button>
-        <button data-value="2">&#9733;</button>
-        <button data-value="1">&#9733;</button>
-      </div>
-      <div class="rating-value">Rating: <span id="rating">0</span>/5</div>
-      <button class="submit-button" id="rating_subnit">Submit</button>
-    </div>
-
     <!-- Footer -->
     <footer>
-      <p>&copy; 2025 karan_k_code. All rights reserved.</p>
+      <p>&copy; 2026 karan_k_code. Crafted with passion.</p>
       <div class="social-icons">
         <a href="https://github.com/karan-k-code" target="_blank"
-          ><i class="fa-brands fa-github"></i> <span>GitHub</span></a
-        >
-        <a href="https://www.linkedin.com/in/karan-k-code" target="_blank"
-          ><i class="fa-brands fa-linkedin"></i> <span>LinkedIn</span>
-        </a>
+          ><i class="fa-brands fa-github"></i
+        ></a>
+        <a href="https://linkedin.com/in/karan-k-code" target="_blank"
+          ><i class="fa-brands fa-linkedin"></i
+        ></a>
         <a href="https://x.com/Karan_k_code" target="_blank"
-          ><i class="fa-brands fa-twitter"></i> <span>Twitter</span></a
-        >
-        <a href="https://instagram.com/Karan_k_code" target="_blank"
-          ><i class="fa-brands fa-instagram"></i> <span>instagram</span></a
-        >
+          ><i class="fa-brands fa-twitter"></i
+        ></a>
       </div>
     </footer>
+
+    <script src="script.js"></script>
   </body>
-  <script src="script.js"></script>
 </html>

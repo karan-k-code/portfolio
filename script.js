@@ -133,10 +133,20 @@ if (contactForm) {
     const formData = new FormData(this);
     const data = Object.fromEntries(formData.entries());
 
+    console.log("Form Data:", data); // Debugging log
+
     // Mocking the fetch for now as I don't want to break their existing endpoint
     // but the logic remains similar.
     try {
-      // In a real scenario, use: await fetch('api_url', { method: 'POST', body: JSON.stringify(data) })
+      // const api_url = "http://127.0.0.1:5000/api/v1/feedback/contactus";
+      const api_url = "https://kitmo.onrender.com/api/v1/feedback/contactus";
+      await fetch(api_url, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
       setTimeout(() => {
         responseMessage.textContent = "Thank you! I'll get back to you soon.";
         this.reset();

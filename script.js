@@ -133,8 +133,6 @@ if (contactForm) {
     const formData = new FormData(this);
     const data = Object.fromEntries(formData.entries());
 
-    console.log("Form Data:", data); // Debugging log
-
     // Mocking the fetch for now as I don't want to break their existing endpoint
     // but the logic remains similar.
     try {

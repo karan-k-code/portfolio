@@ -94,6 +94,13 @@ const project_data = [
     dec: "Modern plant shop platform with markdown support and user authentication.",
     tech: ["React", "node.js", "MongoDB"],
   },
+  {
+    title: "Tools CLI",
+    url: "https://tools-cli.konshu.in/",
+    img: "./image/tools.konshu.in.png",
+    dec: "Tools CLI is a cheat sheet for developers, providing quick access to commands and snippets.",
+    tech: ["React", "css", "javascript"],
+  },
 ];
 
 const project_gen = () => {

@@ -67,25 +67,11 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
 // Project Data & Generation
 const project_data = [
   {
-    title: "Kitmo E-commerce",
-    url: "https://karan-k-code.github.io/kitmo/",
-    img: "./image/cart_show.png",
-    dec: "A high-performance e-commerce platform with secure payments and real-time inventory.",
-    tech: ["React", "Node.js", "MongoDB"],
-  },
-  {
-    title: "kOnshu Social",
-    url: "https://konshu.xyz/",
-    img: "./image/konshu.png",
-    dec: "Full-featured social media platform with real-time chat and post interactions.",
-    tech: ["Socket.io", "Express", "MongoDB"],
-  },
-  {
-    title: "kCode Blog",
-    url: "https://kcode.konshu.in/",
-    img: "./image/k_code.png",
-    dec: "Modern blogging platform with markdown support and user authentication.",
-    tech: ["Django", "React", "PostgreSQL"],
+    title: "Tools CLI",
+    url: "https://tools-cli.konshu.in/",
+    img: "./image/tools.konshu.in.png",
+    dec: "Tools CLI is a cheat sheet for developers, providing quick access to commands and snippets.",
+    tech: ["React", "css", "javascript"],
   },
   {
     title: "Plant Shop",
@@ -95,11 +81,25 @@ const project_data = [
     tech: ["React", "node.js", "MongoDB"],
   },
   {
-    title: "Tools CLI",
-    url: "https://tools-cli.konshu.in/",
-    img: "./image/tools.konshu.in.png",
-    dec: "Tools CLI is a cheat sheet for developers, providing quick access to commands and snippets.",
-    tech: ["React", "css", "javascript"],
+    title: "kCode Blog",
+    url: "https://kcode.konshu.in/",
+    img: "./image/k_code.png",
+    dec: "Modern blogging platform with markdown support and user authentication.",
+    tech: ["Django", "React", "PostgreSQL"],
+  },
+  {
+    title: "kOnshu Social",
+    url: "https://konshu.xyz/",
+    img: "./image/konshu.png",
+    dec: "Full-featured social media platform with real-time chat and post interactions.",
+    tech: ["Socket.io", "Express", "MongoDB"],
+  },
+  {
+    title: "Kitmo E-commerce",
+    url: "https://karan-k-code.github.io/kitmo/",
+    img: "./image/cart_show.png",
+    dec: "A high-performance e-commerce platform with secure payments and real-time inventory.",
+    tech: ["React", "Node.js", "MongoDB"],
   },
 ];
 

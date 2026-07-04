@@ -23,6 +23,11 @@
   font-family: "Plus Jakarta Sans", sans-serif;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -272,6 +277,12 @@ section {
   display: flex;
   flex-direction: column;
   height: 100%;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--accent-primary);
+  box-shadow: 0 10px 30px rgba(56, 189, 248, 0.15);
 }
 
 .p-img {

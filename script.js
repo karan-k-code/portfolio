@@ -89,7 +89,7 @@ const project_data = [
   },
   {
     title: "kOnshu Social",
-    url: "https://konshu.xyz/",
+    url: "https://konshu.in/",
     img: "./image/konshu.png",
     dec: "Full-featured social media platform with real-time chat and post interactions.",
     tech: ["Socket.io", "Express", "MongoDB"],
@@ -110,13 +110,13 @@ const project_gen = () => {
   project_section.innerHTML = project_data
     .map(
       (project) => `
-      <div class="project-card reveal" onclick="window.open('${project.url}', '_blank')">
-        <img class="p-img" src="${project.img}" alt="${project.title}" />
+      <a href="${project.url}" target="_blank" rel="noopener noreferrer" class="project-card reveal" aria-label="View details of project ${project.title}">
+        <img class="p-img" src="${project.img}" alt="Screenshot of project ${project.title}" />
         <div class="project-info">
           <h3 class="project-card-title">${project.title}</h3>
           <p class="project-card-dec">${project.dec}</p>
         </div>
-      </div>
+      </a>
     `,
     )
     .join("");

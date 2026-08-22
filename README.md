@@ -2,7 +2,7 @@
 
 A clean, responsive personal website that showcases projects, skills, and ways to connect. Built with plain HTML, CSS and JavaScript so it’s easy to fork, customize, and host.
 
-Live demo: https://karan-k-code.github.io/portfolio/
+Live : https://karan.konshu.in
 
 ---
 

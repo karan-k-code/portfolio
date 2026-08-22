@@ -9,7 +9,7 @@
   --text-primary: #f8fafc;
   --text-secondary: #94a3b8;
   --white: #ffffff;
-  
+
   /* Spacing & Borders */
   --section-gap: 8rem;
   --border-radius: 1rem;
@@ -58,7 +58,9 @@ body {
 }
 
 /* Typography Overhaul */
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-family: "Plus Jakarta Sans", sans-serif;
   font-weight: 800;
   letter-spacing: -0.03em;
@@ -69,7 +71,7 @@ h2 {
   text-align: center;
   margin-bottom: 3rem;
   background: linear-gradient(to right, var(--white), var(--text-secondary));
-  -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -107,8 +109,12 @@ nav.scrolled {
   background: rgba(15, 23, 42, 0.9);
 }
 
-.nav1 { display: none; } /* Simplify to one nav */
-.nav2 { display: flex; }
+.nav1 {
+  display: none;
+} /* Simplify to one nav */
+.nav2 {
+  display: flex;
+}
 
 .logo {
   font-size: 1.5rem;
@@ -188,7 +194,9 @@ nav.scrolled {
 }
 
 /* Hide old image grid */
-.image_b { display: none; }
+.image_b {
+  display: none;
+}
 
 /* Sections */
 section {
@@ -204,8 +212,13 @@ section {
   align-items: center;
 }
 
-#about h2 { text-align: left; }
-#about p { text-align: left; font-size: 1.1rem; }
+#about h2 {
+  text-align: left;
+}
+#about p {
+  text-align: left;
+  font-size: 1.1rem;
+}
 
 .resum {
   display: flex;
@@ -450,8 +463,10 @@ footer {
 }
 
 @media (max-width: 968px) {
-  h2 { font-size: 2.2rem; }
-  
+  h2 {
+    font-size: 2.2rem;
+  }
+
   section {
     padding: 4rem 5%;
   }
@@ -463,23 +478,36 @@ footer {
     padding: 7rem 5% 3rem;
   }
 
-  .hero-content h1 { font-size: 3rem; }
+  .hero-content h1 {
+    font-size: 3rem;
+  }
 
   .contact-form {
     padding: 2rem 1.5rem;
     border-radius: 1.5rem;
   }
 
-  .hero-content { text-align: center; }
-  .hero-content p { margin: 0 auto 2rem; text-align: center !important; }
-  .hero-content h1 { font-size: 3.5rem; }
-  .hero-content .resum { justify-content: center; }
+  .hero-content {
+    text-align: center;
+  }
+  .hero-content p {
+    margin: 0 auto 2rem;
+    text-align: center !important;
+  }
+  .hero-content h1 {
+    font-size: 3.5rem;
+  }
+  .hero-content .resum {
+    justify-content: center;
+  }
 
   #about {
     grid-template-columns: 1fr;
   }
 
-  .profile-card { margin: 0 auto; }
+  .profile-card {
+    margin: 0 auto;
+  }
 
   .project_card_div {
     grid-template-columns: 1fr;
@@ -488,10 +516,18 @@ footer {
 }
 
 @media (max-width: 768px) {
-  .menu { display: none; }
-  .togle_button { display: flex; }
+  .menu {
+    display: none;
+  }
+  .togle_button {
+    display: flex;
+  }
 }
 
 /* Utils */
-.line_l { display: none; } 
-.line-sdf { display: none; }
+.line_l {
+  display: none;
+}
+.line-sdf {
+  display: none;
+}

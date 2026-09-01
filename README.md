@@ -40,11 +40,11 @@ Live : https://karan.konshu.in
 Small fixes and improvements welcome. Open an issue or submit a pull request with a clear description of the change.
 
 ## License
-MIT — see LICENSE (or add one) for details.
+ [MIT LICENSE](./LICENSE) — see  for details.
 
 ## Contact
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/karan-k-code/)  [GitHub Pages demo](https://karan-k-code.github.io/portfolio/)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/karan-k-code/)  [karan.konshu.in](https://karan.konshu.in)
 
 ---
 
-Made with ❤️ — Karan Kumar
+Made with ❤️ — karan_k_code

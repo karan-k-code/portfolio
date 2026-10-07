@@ -89,7 +89,7 @@ const project_data = [
   },
   {
     title: "kOnshu Social",
-    url: "https://konshu.in/",
+    url: "https://konshu.in/projects/konshu-xyz.html",
     img: "./image/konshu.webp",
     dec: "Full-featured social media platform with real-time chat and post interactions.",
     tech: ["Socket.io", "Express", "MongoDB"],
